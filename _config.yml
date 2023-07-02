@@ -4,13 +4,13 @@ title: Ярасту
 description: Ярасту как стать выше ростом
 logo: assets/images/logo.svg
 favicon: assets/images/logo.svg
-baseurl: "https://yarastu.github.io"
+baseurl: /yarastu
 google_analytics: G-N95K3D62RR
 disqus: yarastu
-mailchimp-list: https://protonmail.us10.list-manage.com/subscribe?u=14aecd7ad2d0ab84409f294d7&id=cdaf122bc1
+mailchimp-list: "https://protonmail.us10.list-manage.com/subscribe?u=14aecd7ad2d0ab84409f294d7&id=cdaf122bc1"
 include: ["_pages"]
-youtube: https://youtube.com/yarasty
-telegram: https://t.me/yarasty
+youtube: "https://youtube.com/yarasty"
+telegram: "https://t.me/yarasty"
 podcast:
 permalink: /:categories/:title
 email: vadim@yarastu.ru
@@ -23,8 +23,8 @@ authors:
     display_name: Вадим
     avatar: vadim.jpg
     email: vadim@yarastu.ru
-    web: https://yarastu.ru
-    twitter: https://twitter.com/yarasty8
+    web: "https://yarastu.ru"
+    twitter: "https://twitter.com/yarasty8"
     description: Делюсь идеями, как вырасти ребенку, подростку, взрослому.
 
 # Plugins
