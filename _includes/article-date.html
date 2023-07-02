@@ -1,0 +1,20 @@
+<!-- Article Date 
+================================================== -->
+<p class="article-date">  
+  <small>
+    {{ site.data.i18n['article-posted'][lang] }}
+    <time datetime="{{ page.date | date_to_xmlschema }}">
+    {% if lang == "ru" %} {% include date.html date=page.date %}
+    {% else %} {{ page.date | date_to_string }}
+    {% endif %}
+    </time>
+    {% if page.update %}
+    <br>{{ site.data.i18n['article-edited'][lang] }} 
+    <time datetime="{{ page.update | date_to_xmlschema }}" itemprop="dateModified">
+    {% if lang == "ru" %} {% include date.html date=page.update %}
+    {% else %} {{ page.update | date_to_string }}
+    {% endif %}
+    </time>
+    {% endif %}
+  </small>
+</p>

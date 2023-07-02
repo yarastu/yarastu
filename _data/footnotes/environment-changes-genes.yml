@@ -1,0 +1,20 @@
+"abcnews":
+  id: "abcnews"
+  title: "Severe Stunting: Twelve Years Old Going on Five by abcnews.go.com"
+  url: "https://abcnews.go.com/Health/malnutrition-severe-stunting-guatemalan-children/story?id=12381731"
+"piramid":
+  id: "piramid"
+  title: "Healthy Eating Pyramid by harvard.edu"
+  url: "https://www.hsph.harvard.edu/nutritionsource/healthy-eating-pyramid/"
+"independent":
+  id: "independent"
+  title: "Rosario. The Old Coach and the Kid by independent.ie"
+  url: "https://www.independent.ie/sport/soccer/rosario-the-old-coach-and-the-kid/26496103.html"
+"undp":
+  id: "undp"
+  title: "Country Insights by undp.org"
+  url: "https://hdr.undp.org/data-center/country-insights#/ranks"
+"scientificamerican":
+  id: "scientificamerican"
+  title: "How much of human height is genetic and how much is due to nutrition? By scientificamerican.com"
+  url: "https://www.scientificamerican.com/article/how-much-of-human-height/"

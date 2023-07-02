@@ -1,0 +1,76 @@
+---
+layout: default
+---
+{% assign lang = page.lang %}
+{% assign guides = site.pages | where: "type", "guide" | where: "lang", lang %}
+{% assign tactics = site.posts | where: "lang", lang %}
+
+<!-- Author
+================================================== -->
+{% assign author = site.authors['vadim'] %}
+<div class="authorbox">   
+  <div class="row">
+    <div class="wrapavname col-3 col-xl-2">                        
+      <img src="{{ baseurl }}/assets/images/{{ author.avatar }}" alt="{{ site.data.i18n['vadim'][lang] }}">
+    </div>
+    <div class="col-9 col-xl-10">
+      <h4>{{ site.data.i18n['hello'][lang] }}</h4>
+      <p class="mt-3 mb-0">{{ site.data.i18n['hello-lead'][lang] }}</p>
+    </div>
+  </div> 
+</div> 
+
+<!-- Guides
+================================================== -->
+<section class="home-entries">
+  <h2>{{ site.data.i18n['nav-li-guides'][lang] }}</h2>
+  <article class="blog-grid-container">
+    {% for post in guides limit: 3 %}
+      {% capture img-name %}{{ post.slug }}{% endcapture %}
+      {% capture img-alt %}{{ post.title }}{% endcapture %}
+      <article class="blog-grid-item">
+        <div class="card h-100 w-100">
+          <div class="maxthumb">
+            <a href="{{ site.baseurl }}{{ post.url }}">
+              {% include thumbnail.html name=img-name alt=img-alt %}
+            </a>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title"><a class="text-dark" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+          </div>
+        </div>
+      </article>
+    {% endfor %}
+    <article class="blog-grid-item home-entries-more">
+      <div class="card h-100 w-100">
+        <a class="text-dark" href="{{ site.baseurl }}guides">{{ site.data.i18n['more-posts'][lang] }}&nbsp;({{- posts.size -}})&nbsp;»</a>
+      </div>
+    </article>
+  </article>
+</section>
+
+<!-- New findings
+================================================== -->
+<article class="home-entries guides-entries">
+  <h2>{{ site.data.i18n['findings-header'][lang] }}</h2>
+  {% for post in tactics limit: 3 %}
+    {% capture img-name %}{{ post.slug }}{% endcapture %}
+    {% capture img-alt %}{{ post.title }}{% endcapture %}
+    <article class="blog-grid-item item-tactic">
+      <div class="card card-tactic w-100">
+        <div class="maxthumb">
+          <a href="{{ site.baseurl }}{{ post.url }}">
+            {% include thumbnail.html name=img-name alt=img-alt %}
+          </a>
+        </div>
+        <div class="card-body card-home">
+          <h3 class="card-title"><a class="text-dark" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+          <p class="card-text">{{ post.beforetoc | truncatewords:20 }}</p>
+          <a href="{{ site.baseurl }}{{ post.url }}" class="btn btn-info">{{ site.data.i18n['tactic-extend'][lang] }}</a>
+        </div>
+      </div>
+    </article>
+  {% endfor %}
+</article>
+
+{{ content }}

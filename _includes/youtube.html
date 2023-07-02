@@ -1,0 +1,12 @@
+<!-- Embed Youtube
+================================================== -->
+<p class="iframe-box">
+    <!-- if JS enable -->
+    <iframe class="iframe-video lazyload nojs" title="Youtube player" width="560" height="315" data-src="https://www.youtube.com/embed/{{ include.id }}?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+    </iframe>
+    <!-- if JS disabled -->
+    <noscript>
+        <iframe loading="lazy" class="iframe-video" title="Youtube player" width="560" height="315" src="https://www.youtube.com/embed/{{ include.id }}?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+        </iframe>
+    </noscript>
+</p>

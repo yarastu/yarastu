@@ -1,0 +1,24 @@
+<!-- Search and lang link
+================================================== -->
+<div class="wrap-search nojs">
+    <div class="d-flex align-items-center ml-auto">        
+        {% for post in posts %}
+          {% if post.lang != lang %}
+            <a title="{{ post.lang }}" class="translate" href="{{ site.baseurl }}{{ post.url }}">{{ post.lang }}</a>
+          {% endif %}
+        {% endfor %}
+        <i class="fas fa-search show-search"></i>
+        <form action="{{ site.baseurl }}/{% if lang == 'en'%}en/{%endif %}search" method="get" class="bd-search d-flex align-items-center ml-3">
+            <input 
+                id="lunrsearch" 
+                type="text" 
+                class="form-control bigradius text-small" 
+                name="q" 
+                maxlength="255" 
+                value="" 
+                placeholder="{{ site.data.i18n['search-placeholder'][lang] }}"
+            >
+            <button class="form-control bigradius text-small launch-modal-search">{{ site.data.i18n['search-button'][lang] }}</button>
+        </form>
+    </div>
+</div>

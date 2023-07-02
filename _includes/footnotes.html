@@ -1,0 +1,7 @@
+<!-- Footnotes
+================================================== -->
+{% assign slug = page.slug %}
+{% assign footnotes = site.data.footnotes[slug] %}
+{% for footnote in footnotes %}
+  [^{{ footnote[1].id }}]:{% if footnote[1].url %}[{{ footnote[1].title }}]({{ footnote[1].url }}){: target="_blank" }{% else %}{{ footnote[1].title }}{% endif %}
+{% endfor %}

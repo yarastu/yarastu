@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+{% assign lang = page.lang %}
+<html lang="{{ lang }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="{{ site.baseurl }}/assets/images/logo.png">
+    <noscript>
+        <style>
+            .nojs { display: none!important; } 
+        </style>
+    </noscript>
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/theme.css">
+    <title>{{ page.title }} | {{ site.data.i18n['name'][lang] }}</title>    
+    <!-- Linked posts -->
+    {% assign posts = site.posts | where:"slug", page.slug | sort: 'lang' %}
+    {% if posts.size == 0 %} {% assign posts = site.pages | where:"slug", page.slug | sort: 'lang' %} {% endif %}
+    {% for post in posts %} <link rel="alternate" hreflang="{{ post.lang }}" href="{{ site.baseurl }}{{ post.url }}">{% endfor %}
+    <!-- SEO tag -->
+    {% seo %}
+</head>
+
+<!-- Google Analytics -->
+{% if jekyll.environment == 'production' %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{site.google_analytics}}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ site.google_analytics }}');
+</script>
+{% endif %}
+
+{% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
+
+<body>
+
+<!-- Defer loading of font and font awesome -->
+<noscript id="deferred-styles">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+</noscript>
+
+<!-- Start Sidebar Navigation
+================================================== -->
+<div class="sidebar nojs"></div>   
+<div class="nav-icon nojs">
+    <div class="hamburger-bar"></div>
+</div>
+<div id="blackover-nav" class="blackover nojs"></div>
+<nav id="menu" class="nojs">
+    <ul>
+        <li><a title="{{ site.data.i18n['nav-li-home'][lang] }}" {% if page.slug != "home" %}href="{{ site.baseurl }}/{% if lang == 'en' %}en/{% endif %}"{% else %}class="menu-active-color"{% endif %}>{{ site.data.i18n['nav-li-home'][lang] }}</a></li>
+        <li><a title="{{ site.data.i18n['nav-li-about'][lang] }}" {% if page.slug != "about" %}href="{{ site.baseurl }}about"{% else %}class="menu-active-color"{% endif %}>{{ site.data.i18n['nav-li-about'][lang] }}</a></li>
+        <li><a title="{{ site.data.i18n['nav-li-guides'][lang] }}" {% if page.slug != "guides" %}href="{{ site.baseurl }}/guides"{% else %}class="menu-active-color"{% endif %}>{{ site.data.i18n['nav-li-guides'][lang] }}</a></li>         
+    </ul>   
+</nav>
+<!-- Search and lang link -->
+{% include search-and-lang.html %}
+<!-- End Sidebar Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+    <!-- Navigation NoJS
+    ================================================== -->
+    {% include nav-nojs.html %}
+        
+    <!-- Site Logo/Name
+    ================================================== -->
+    <a class="navbar-brand"     
+        {% if page.url != '/' and page.url != '/en/' %}
+            href="/{% if lang == 'en'%}en/{%endif %}"
+        {%endif %}
+    >
+        <img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.data.i18n['name'][lang] }}">
+    </a>  
+
+    <!-- Site Tag
+    ================================================== -->
+    {% if page.url == '/' or page.url == '/en/' %}
+    <p class="sitetag">
+       {{ site.data.i18n['name'][lang] }} {{ site.data.i18n['site-description'][lang] }}
+    </p>
+    {% endif %}
+
+    <!-- Content
+    ================================================== -->
+    <main class="main-content">
+        {{ content }}
+    </main>
+
+    {% if site.mailchimp-list %}
+    <!-- Newsletter
+    ================================================== -->
+    <section class="newsletter text-center">
+        <h4>{{ site.data.i18n['newsletter-header'][lang] }}</h4>
+        <form action="{{site.mailchimp-list}}" method="post" name="mc-embedded-subscribe-form" class="wj-contact-form validate" target="_blank" novalidate>
+            <div class="mc-field-group d-inline-flex">
+            <input type="email" placeholder="Email" name="EMAIL" class="required email" id="mce-EMAIL" autocomplete="on" required>
+            <input type="submit" value="{{ site.data.i18n['newsletter-button'][lang] }}" name="subscribe" class="heart">
+            </div>
+        </form>
+    </section>
+    {% endif %}
+    
+</div>
+
+<!-- Begin Footer
+================================================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 text-center text-lg-left">
+              {{ site.time | date: "%Y" }} <a title="{{ site.email }}" target="_blank" class="d-inline-block mx-1 text-dark" href="mailto:{{ site.email }}">{{ site.email }}</a>
+            </div>
+            <div class="col-md-6 col-sm-12 text-center text-lg-right">  
+                <a 
+                    title="{{ site.data.i18n['name'][lang] }}" 
+                    class="text-dark" 
+                    {% if page.url != '/' and page.url != '/en/' %}
+                        href="/{% if lang == 'en'%}en/{%endif %}"
+                    {%endif %}
+                >
+                    {{ site.data.i18n['name'][lang] }}
+                </a>
+              <a title="Youtube" target="_blank" class="d-inline-block mx-1 text-dark" href="{{ site.youtube }}"><i class="fab fa-youtube"></i></a>  
+              <a title="Podcast" target="_blank" class="d-inline-block mx-1 text-dark" href="{{ site.podcast }}"><i class="fa fa-podcast"></i></a>  
+              <a title="Telegram" target="_blank" class="d-inline-block mx-1 text-dark" href="{{ site.telegram }}"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer
+================================================== -->
+
+</div> <!-- /.site-content -->
+
+<script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
+
+<script src="{{ site.baseurl }}/assets/js/theme.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+---
+layout: default
+---
+{% assign lang = page.lang %}
+<style> .newsletter, .footer { display:none; }</style>
+<div class="text-center">
+    <h1 class="mt-5"><span class="badge badge-dark font-weight-normal">{{page.title}}</span></h1>
+    <h1 class="display-1 mt-4 mb-4">{{ site.data.i18n['page404-header'][lang] }}</h1>
+    <p>{{ site.data.i18n['page404-body'][lang] }}</p>
+</div>
+
+{{ content }}

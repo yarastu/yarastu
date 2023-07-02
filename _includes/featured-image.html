@@ -1,0 +1,51 @@
+<!- Featured Image ->
+{% assign name = page.slug %}
+
+{% if name %}
+
+  {% assign svg       = name | append: ".svg" %}
+  {% assign jpg700w   = name | append: "@700w.jpg" %}
+  {% assign jpg1400w  = name | append: "@1400w.jpg" %}
+  {% assign webp700w  = name | append: "@700w.webp" %}
+  {% assign webp1400w = name | append: "@1400w.webp" %}
+  
+  {% assign files             = site.static_files | where: "image", true %}
+  {% assign exist--svg        = files | where: "name", svg | first %}
+  {% assign exist--jpg700w    = files | where: "name", jpg700w | first %}
+  {% assign exist--jpg1400w   = files | where: "name", jpg1400w | first %}
+  {% assign exist--webp700w   = files | where: "name", webp700w | first %}
+  {% assign exist--webp1400w  = files | where: "name", webp1400w | first %} 
+  
+  {% if exist--jpg700w %} 
+
+  <div class="entry-featured-image">
+    <picture>
+      {% if exist--svg %}
+        <source 
+          type="image/svg+xml" 
+          srcset="{{ site.baseurl }}/assets/images/{{ name }}/{{ svg }}"
+          >
+      {% endif %}
+      {% if exist--webp700w %}
+        <source 
+          type="image/webp"
+          srcset="{% if exist--webp1400w %}{{ site.baseurl }}/assets/images/{{ name }}/{{ webp1400w }} 2x,{% endif %}
+            {{ site.baseurl }}/assets/images/{{ name }}/{{ webp700w }} 1x"
+          >
+      {% endif %}
+      <img 
+        class="featured-image" 
+        width="700" 
+        height="390" 
+        src="{{ site.baseurl }}/assets/images/{{ name }}/{{ jpg700w }}" 
+        {% if exist--jpg1400w %}
+          srcset="{{ site.baseurl }}/assets/images/{{ name }}/{{ jpg1400w }} 2x" 
+        {% endif %}
+        alt="{{ page.title }}"
+        >
+    </picture>
+  </div> 
+  
+  {% else %} <p>an image didn't load / изображение не загрузилось</p>
+  {% endif %}
+{% endif %} 

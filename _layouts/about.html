@@ -1,0 +1,28 @@
+---
+layout: default
+---
+{% assign lang = page.lang %}
+
+<div class="page-single">
+    <div class="entry-header">       
+        <h1>{{ page.title }}</h1>        
+    </div>
+</div>
+
+<div class="article-post">
+    <form action="https://formspree.io/f/meqwgnkv" method="POST">    
+    <p class="mb-4">{{ site.data.i18n['about-contact-header'][lang] }}</p>
+    <div class="form-group row">
+    <div class="col-md-6">
+    <input class="form-control" type="text" name="name" placeholder="{{ site.data.i18n['about-contact-name-field'][lang] }}*" required>
+    </div>
+    <div class="col-md-6">
+    <input class="form-control" type="email" name="_replyto" placeholder="Email*" required>
+    </div>
+    </div>
+    <textarea rows="8" class="form-control mb-3" name="message" placeholder="{{ site.data.i18n['about-contact-message-field'][lang] }}*" required></textarea>    
+    <input class="btn btn-dark" type="submit" value="{{ site.data.i18n['about-contact-submit-button'][lang] }}">
+    </form>
+</div>
+
+{{ content }}

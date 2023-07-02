@@ -1,0 +1,51 @@
+<!-- Navigation NoJS
+================================================== -->
+<noscript>
+<style>
+  .nav-nojs { 
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex; 
+    list-style: none;
+    padding: inherit;
+  }
+  .nav-nojs li a {padding-right: 1.25rem; color:#000;}
+</style>
+<nav>
+    <ul class="nav-nojs">
+        <li>
+            <a {% if page.slug != "home" %}href="{{ site.baseurl }}/"{% else %}style="color: #8e9aa7"{% endif %} title="{{ site.data.i18n['nav-li-home'][lang] }}">
+                {{ site.data.i18n['nav-li-home'][lang] }}
+            </a>
+        </li>
+        <li>
+            <a {% if page.slug != "about" %}href="{{ site.baseurl }}about"{% else %}style="color: #8e9aa7"{% endif %} title="{{ site.data.i18n['nav-li-about'][lang] }}">
+                {{ site.data.i18n['nav-li-about'][lang] }}
+            </a>
+        </li>
+        <li>
+            <a {% if page.slug != "guides" %} href="{{ site.baseurl }}guides"{% else %}style="color: #8e9aa7"{% endif %} title="{{ site.data.i18n['nav-li-guides'][lang] }}">
+                {{ site.data.i18n['nav-li-guides'][lang] }}
+            </a>
+        </li>  
+        {% for post in posts %}
+            {% if post.lang != lang %}
+                <li>
+                    <a title="{{ post.lang }}" href="{{ site.baseurl }}{{ post.url }}">{{ post.lang }}</a>
+                </li>      
+            {% endif %}
+        {% endfor %}
+        <li>
+            <a 
+                {% if page.slug != "search" %}
+                    href="{{ site.baseurl }}search"
+                {% endif %}
+            >
+                <i class="fas fa-search show-search"></i>
+            </a>
+        </li>
+    </ul>   
+</nav>
+</noscript>

@@ -1,0 +1,150 @@
+name:
+    ru: Ярасту
+    en: Yarasty
+# Home
+site-description:
+    ru: как стать выше ростом
+    en: how to increase height
+more-posts:
+    ru: Смотреть все
+    en: View all 
+findings-header:
+    ru: Новые находки
+    en: New findings
+# Menu
+nav-header:
+    ru: Навигация
+    en: Navigation
+nav-li-home:
+    ru: Главная
+    en: Home
+nav-li-about:
+    ru: Проект
+    en: About
+nav-li-guides:
+    ru: Гиды
+    en: Guides
+# Search
+search-placeholder:
+    ru: Запрос...
+    en: Type...
+search-button:
+    ru: Поиск
+    en: Go
+search-results-header: 
+    ru: Результаты поиска для
+    en: Search results for
+search-results-no-found: 
+    ru: Ничего не найдено
+    en: No results found
+search-nojs:
+    ru: Пожалуйста, включите JavaScript, чтобы использовать поиск — <a class="text-dark" title="Как включить JavaScript в браузере" href="https://www.enable-javascript.com/" target="_blank">enable-javascript.com</a>.
+    en: Please enable JavaScript to use a search engine — <a class="text-dark" title="How to enable JavaScript in your browser" href="https://www.enable-javascript.com/" target="_blank">enable-javascript.com</a>.
+# Post
+hello:
+    ru: Привет! Я Вадим.
+    en: Hi, I'm Vadim.
+hello-lead:
+    ru: Я делюсь практичными, увлекательными и научно доказанными идеями, как вырасти ребенку, подростку, взрослому.
+    en: I share practical, intriguing, and research-based ideas on how to help a child, a teen, and an adult grow taller.
+anna:
+    ru: Анна
+    en: Anna
+edit:
+    ru: Править
+    en: Edit
+article-posted:
+    ru: Опубликовано
+    en: Posted on
+article-edited:
+    ru: Последняя правка
+    en: Last edited on
+toc-header:
+    ru: Содержание
+    en: Table of contents 
+# Comments
+comments-header:
+    ru: Комментарии
+    en: Comments
+comments-loading:
+    ru: Загрузка комментариев...
+    en: Loading comments...
+comments-nojs:
+    ru: Disqus не загружен.<br> Пожалуйста, включите JavaScript, чтобы видеть комментарии — <a class="text-dark" title="Как включить JavaScript в браузере" href="https://www.enable-javascript.com/" target="_blank">enable-javascript.com</a>.
+    en: Disqus could not be loaded. <br>Please enable JavaScript to see the comments — <a class="text-dark" title="How to enable JavaScript in your browser" href="https://www.enable-javascript.com/" target="_blank">enable-javascript.com</a>.
+# Newsletter
+newsletter-header:
+    ru: Присоединяйтесь к 25 тысячам подписчиков
+    en: Join 25k subscribers
+newsletter-button:
+    ru: Подписаться бесплатно
+    en: Subscribe for free
+# 404
+page404-header:
+    ru: Страница не найдена
+    en: Page not found
+page404-body:
+    ru: Пожалуйста, пользуйтесь поиском.
+    en: Please use the search bar.
+# About
+about-contact-header:
+    ru: Отправьте сообщение.
+    en: Send a message.
+about-contact-name-field:
+    ru: Имя
+    en: Name
+about-contact-message-field:
+    ru: Сообщение
+    en: Message 
+about-contact-submit-button:
+    ru: Отправить
+    en: Submit
+# Guides
+guides-lead:
+    ru: Бесплатные и подробные руководства
+    en: Free and in-depth tutorials
+guides-warning:
+    ru: "Предупреждение о вреде для здоровья: описываемые совет сопряжены с риском, поэтому, прежде чем приступить к ним, сначала проконсультируйтесь с врачом."
+    en: "Health warning: The advice I'm about to give you comes with some risks, so before you jump into it, make sure to talk to a doctor first." 
+guide-naturally-lead:
+    ru: Как получить максимум роста без хирургии при отрытых зонах роста здоровому человеку?
+    en: How can you maximize your height growth without surgery when your growth plates are still open?
+guide-view:
+    ru: Смотреть
+    en: View
+tactic-header-theory:
+    ru: Теория
+    en: Theory
+tactic-header-pharm:
+    ru: Фарма
+    en: Pharm
+tactic-header-mental:
+    ru: Настрой
+    en: Mental attitude
+tactic-header-food:
+    ru: Еда
+    en: Food
+tactic-header-sport:
+    ru: Спорт
+    en: Sport
+tactic-header-temperature:
+    ru: Температура
+    en: Temperature
+tactic-error:
+    ru: Материалы не найдены
+    en: Materials not found
+tactic-extend:
+    ru: Дальше
+    en: Extend
+tactic-less:
+    ru: Скрыть
+    en: Less
+tactic-share:
+    ru: Постоянная ссылка
+    en: Shareable link 
+tactic-share-copy:
+    ru: копировать
+    en: copy
+tactic-share-copied:
+    ru: скопировано
+    en: copied
