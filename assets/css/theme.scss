@@ -1,6 +1,5 @@
 ---
 ---
-
 $brown: #B59F62;
 $teal: #40FFDC;
 $black: #111;
@@ -17,7 +16,7 @@ $enable-rounded: false;
 @import 'stars';
 
 // general
-body, input, button, select, optgroup, textarea {   
+body, input, button, select, optgroup, textarea {
     font-family:Roboto;
 }
 body {
@@ -40,7 +39,7 @@ h1,h2,h3,h4,h5,h6 {
     padding-top:50px;
 }
 .sitetag {
-    font-weight:700;    
+    font-weight:700;
     line-height:1.3;
     font-size:35px;
     @include media-breakpoint-up(sm) {
@@ -70,17 +69,17 @@ blockquote {
     }
 }
 // animation
-.nav-icon, 
-.hamburger-bar, 
-.hamburger-bar:before, 
-.hamburger-bar:after, 
-#menu, 
-body, 
-a, 
-a:hover, 
-body.active-side, 
-.site-content, 
-.show-search, .show-search:hover, 
+.nav-icon,
+.hamburger-bar,
+.hamburger-bar:before,
+.hamburger-bar:after,
+#menu,
+body,
+a,
+a:hover,
+body.active-side,
+.site-content,
+.show-search, .show-search:hover,
 .title, .title:hover,
 .card, .card:hover,
 img, img:hover {
@@ -241,7 +240,7 @@ img, img:hover {
             background-color: inherit;
         }
         a {
-            display: flex;           
+            display: flex;
             justify-content: center;
             align-items: center;
             height: 100%;
@@ -261,7 +260,7 @@ img, img:hover {
     padding-right: 0;
     .item-tactic {
       margin-top: 30px;
-    }    
+    }
 }
 
 .blog-grid-container {
@@ -293,18 +292,18 @@ img, img:hover {
     }
     .footnotes {
       background-color: $gray-bg;
-    } 
+    }
 }
 
-.blog-grid-item {  
+.blog-grid-item {
     color: #333;
     padding: 0;
     display: flex;
     align-items:center;
     .card {
         border: 1px dashed $gray;
-        &:hover {           
-           .card-title a { 
+        &:hover {
+           .card-title a {
                 background-size: 100% 100%;
             }
         }
@@ -313,7 +312,7 @@ img, img:hover {
         font-weight:700;
         font-size:19px;
         line-height:1.4;
-        a { 
+        a {
             background-image: linear-gradient(180deg, transparent 89%, $primary 0);
             background-repeat: no-repeat;
             background-size: 0 100%;
@@ -387,7 +386,7 @@ img, img:hover {
         -ms-flex-pack: justify;
             justify-content: space-between;
     b a {
-       font-weight: normal; 
+       font-weight: normal;
     }
     .edit {
         white-space: nowrap;
@@ -403,9 +402,9 @@ img, img:hover {
 }
 .breadcrumbs {
         display: block;
-        margin-bottom: 30px; 
+        margin-bottom: 30px;
     }
-.btn:after, 
+.btn:after,
 .btn.collapsed:after,
 .copy-shareable-link:before,
 .edit:before {
@@ -460,10 +459,10 @@ img, img:hover {
     h4 {
         line-height:1.3;
     }
-    margin-top:120px;   
+    margin-top:120px;
     img.newsletter-logo {
         max-height:70px;
-    } 
+    }
     input {
         border:1px solid transparent;
     }
@@ -475,7 +474,7 @@ img, img:hover {
             padding:4px 10px;
             min-width:250px;
         }
-        input[type="submit"] {    
+        input[type="submit"] {
             color: #222;
             padding: 4px 20px;
             margin-left:-5px;
@@ -489,7 +488,7 @@ img, img:hover {
     }
 }
 
-// blog 
+// blog
 .article-post, .entry-header, .comments, .article-date, .rating {
     max-width: 740px;
     padding-left: 20px;
@@ -497,8 +496,8 @@ img, img:hover {
     margin-left: auto;
     margin-right: auto;
 }
-.entry-featured-image {  
-    width:940px;  
+.entry-featured-image {
+    width:940px;
     max-width: 100%;
     text-align:center;
     margin-left:auto;
@@ -515,7 +514,7 @@ img, img:hover {
         &:hover {
             color: darken($primary,20%);
         }
-    } 
+    }
     h1 {
         font-size:50px;
         font-weight:700;
@@ -545,7 +544,7 @@ p.guides-lead {
     .author-description {
         font-size:16px;
     }
-} 
+}
 
 .guides-warning {
   max-width: 740px;
@@ -555,7 +554,7 @@ p.guides-lead {
 
 .collapse-tactic figure {
   margin-top:30px;
-  margin-bottom:30px;  
+  margin-bottom:30px;
 }
 
 .article-post,
@@ -579,7 +578,7 @@ p.guides-lead {
       margin: 20px 0;
     }
   }
-  sup { 
+  sup {
       &:after {
         content: "]";
       }
@@ -592,7 +591,7 @@ p.guides-lead {
     }
 }
 
-.article-post {    
+.article-post {
     font-size:18px;
     p, figure, form {
         margin-top:30px;
@@ -631,9 +630,9 @@ p.guides-lead {
     }
 }
 
-.article-date { 
+.article-date {
     color: $gray;
-}  
+}
 
 .c-rating button {
     cursor:none;
@@ -675,8 +674,8 @@ p.guides-lead {
     #comments {
         margin-top:60px;
     }
-    .disqus_placeholder--hidden { 
-        display: none; 
+    .disqus_placeholder--hidden {
+        display: none;
     }
 }
 .related-posts {
@@ -692,9 +691,9 @@ p.guides-lead {
 }
 
 //share
-.share { 
+.share {
     position:fixed;left:15px;bottom:40%;z-index: 1026;
-    text-align:center;    
+    text-align:center;
     ul {
         list-style:none;
         padding-left:0;
@@ -708,7 +707,7 @@ p.guides-lead {
 }
 
 //translate
-.translate { 
+.translate {
     position:fixed;left:30px;bottom:70px;z-index: 1026;
     color: inherit;
     &:hover {
@@ -970,7 +969,7 @@ body.active-side {
         margin-right: 1rem !important;
         color: inherit;
     }
-    
+
     #menu ul {
         padding: 80px 30px 80px 30px;
     }
@@ -988,7 +987,7 @@ body.active-side {
             width: 170px;
         }
     }
-    .article-post, .entry-header, .comments, .article-date, .rating, .authorbox { 
+    .article-post, .entry-header, .comments, .article-date, .rating, .authorbox {
         padding-left:0;
         padding-right:0;
     }
