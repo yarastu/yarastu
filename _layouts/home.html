@@ -8,17 +8,17 @@ layout: default
 <!-- Author
 ================================================== -->
 {% assign author = site.authors['vadim'] %}
-<div class="authorbox">   
+<div class="authorbox">
   <div class="row">
-    <div class="wrapavname col-3 col-xl-2">                        
-      <img src="{{ baseurl }}/assets/images/{{ author.avatar }}" alt="{{ site.data.i18n['vadim'][lang] }}">
+    <div class="wrapavname col-3 col-xl-2">
+      <img src="{{ site.baseurl }}/assets/images/vadim.jpg" alt="{{ site.data.i18n['vadim'][lang] }}">
     </div>
     <div class="col-9 col-xl-10">
       <h4>{{ site.data.i18n['hello'][lang] }}</h4>
       <p class="mt-3 mb-0">{{ site.data.i18n['hello-lead'][lang] }}</p>
     </div>
-  </div> 
-</div> 
+  </div>
+</div>
 
 <!-- Guides
 ================================================== -->
@@ -41,11 +41,13 @@ layout: default
         </div>
       </article>
     {% endfor %}
+    {% if guides.size > 3 %}
     <article class="blog-grid-item home-entries-more">
       <div class="card h-100 w-100">
-        <a class="text-dark" href="{{ site.baseurl }}guides">{{ site.data.i18n['more-posts'][lang] }}&nbsp;({{- posts.size -}})&nbsp;»</a>
+        <a class="text-dark" href="{{ site.baseurl }}/{% if lang == 'en' %}en/{% endif %}guides">{{ site.data.i18n['more-posts'][lang] }}&nbsp;({{ guides.size }})&nbsp;»</a>
       </div>
     </article>
+    {% endif %}
   </article>
 </section>
 

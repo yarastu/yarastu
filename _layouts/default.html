@@ -7,11 +7,11 @@
     <link rel="icon" href="{{ site.baseurl }}/assets/images/logo.png">
     <noscript>
         <style>
-            .nojs { display: none!important; } 
+            .nojs { display: none!important; }
         </style>
     </noscript>
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/theme.css">
-    <title>{{ page.title }} | {{ site.data.i18n['name'][lang] }}</title>    
+    <title>{{ page.title }} | {{ site.data.i18n['name'][lang] }}</title>
     <!-- Linked posts -->
     {% assign posts = site.posts | where:"slug", page.slug | sort: 'lang' %}
     {% if posts.size == 0 %} {% assign posts = site.pages | where:"slug", page.slug | sort: 'lang' %} {% endif %}
@@ -43,7 +43,7 @@
 
 <!-- Start Sidebar Navigation
 ================================================== -->
-<div class="sidebar nojs"></div>   
+<div class="sidebar nojs"></div>
 <div class="nav-icon nojs">
     <div class="hamburger-bar"></div>
 </div>
@@ -51,9 +51,9 @@
 <nav id="menu" class="nojs">
     <ul>
         <li><a title="{{ site.data.i18n['nav-li-home'][lang] }}" {% if page.slug != "home" %}href="{{ site.baseurl }}/{% if lang == 'en' %}en/{% endif %}"{% else %}class="menu-active-color"{% endif %}>{{ site.data.i18n['nav-li-home'][lang] }}</a></li>
-        <li><a title="{{ site.data.i18n['nav-li-about'][lang] }}" {% if page.slug != "about" %}href="{{ site.baseurl }}about"{% else %}class="menu-active-color"{% endif %}>{{ site.data.i18n['nav-li-about'][lang] }}</a></li>
-        <li><a title="{{ site.data.i18n['nav-li-guides'][lang] }}" {% if page.slug != "guides" %}href="{{ site.baseurl }}/guides"{% else %}class="menu-active-color"{% endif %}>{{ site.data.i18n['nav-li-guides'][lang] }}</a></li>         
-    </ul>   
+        <li><a title="{{ site.data.i18n['nav-li-about'][lang] }}" {% if page.slug != "about" %}href="{{ site.baseurl }}/about"{% else %}class="menu-active-color"{% endif %}>{{ site.data.i18n['nav-li-about'][lang] }}</a></li>
+        <li><a title="{{ site.data.i18n['nav-li-guides'][lang] }}" {% if page.slug != "guides" %}href="{{ site.baseurl }}/guides"{% else %}class="menu-active-color"{% endif %}>{{ site.data.i18n['nav-li-guides'][lang] }}</a></li>
+    </ul>
 </nav>
 <!-- Search and lang link -->
 {% include search-and-lang.html %}
@@ -66,16 +66,16 @@
     <!-- Navigation NoJS
     ================================================== -->
     {% include nav-nojs.html %}
-        
+
     <!-- Site Logo/Name
     ================================================== -->
-    <a class="navbar-brand"     
+    <a class="navbar-brand"
         {% if page.url != '/' and page.url != '/en/' %}
-            href="/{% if lang == 'en'%}en/{%endif %}"
+            href="{{ site.baseurl }}/{% if lang == 'en'%}en/{%endif %}"
         {%endif %}
     >
         <img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.data.i18n['name'][lang] }}">
-    </a>  
+    </a>
 
     <!-- Site Tag
     ================================================== -->
@@ -104,7 +104,7 @@
         </form>
     </section>
     {% endif %}
-    
+
 </div>
 
 <!-- Begin Footer
@@ -115,18 +115,18 @@
             <div class="col-md-6 col-sm-12 text-center text-lg-left">
               {{ site.time | date: "%Y" }} <a title="{{ site.email }}" target="_blank" class="d-inline-block mx-1 text-dark" href="mailto:{{ site.email }}">{{ site.email }}</a>
             </div>
-            <div class="col-md-6 col-sm-12 text-center text-lg-right">  
-                <a 
-                    title="{{ site.data.i18n['name'][lang] }}" 
-                    class="text-dark" 
+            <div class="col-md-6 col-sm-12 text-center text-lg-right">
+                <a
+                    title="{{ site.data.i18n['name'][lang] }}"
+                    class="text-dark"
                     {% if page.url != '/' and page.url != '/en/' %}
-                        href="/{% if lang == 'en'%}en/{%endif %}"
+                        href="{{ site.baseurl }}/{% if lang == 'en'%}en/{%endif %}"
                     {%endif %}
                 >
                     {{ site.data.i18n['name'][lang] }}
                 </a>
-              <a title="Youtube" target="_blank" class="d-inline-block mx-1 text-dark" href="{{ site.youtube }}"><i class="fab fa-youtube"></i></a>  
-              <a title="Podcast" target="_blank" class="d-inline-block mx-1 text-dark" href="{{ site.podcast }}"><i class="fa fa-podcast"></i></a>  
+              <a title="Youtube" target="_blank" class="d-inline-block mx-1 text-dark" href="{{ site.youtube }}"><i class="fab fa-youtube"></i></a>
+              <a title="Podcast" target="_blank" class="d-inline-block mx-1 text-dark" href="{{ site.podcast }}"><i class="fa fa-podcast"></i></a>
               <a title="Telegram" target="_blank" class="d-inline-block mx-1 text-dark" href="{{ site.telegram }}"><i class="fab fa-telegram"></i></a>
             </div>
         </div>
