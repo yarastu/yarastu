@@ -4,7 +4,7 @@ title:  "You need growth plates and hormones to increase height"
 beforetoc: "People grow taller with open growth plates in their bones under the influence of growth hormone."
 guide: naturally 
 tactic: theory
-update: 2023-06-24
+update: 2023-07-04
 ---
 Two key factors influence growth potential: 
 - **growth plates**

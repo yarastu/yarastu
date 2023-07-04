@@ -55,9 +55,9 @@ defaults:
   - scope:
       type: "posts"
     values:
+      lang: ru
       toc: false
       layout: post
-      lang: ru
   - scope:
       type: "posts"
       path: "en"
