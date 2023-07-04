@@ -2,13 +2,13 @@
 slug: bone-growth-process
 title:  "You need growth plates and hormones to increase height"
 beforetoc: "People grow taller with open growth plates in their bones under the influence of growth hormone."
-guide: naturally 
+guide: naturally
 tactic: theory
-update: 2023-07-04
+updated: 2023-07-04
 ---
-Two key factors influence growth potential: 
+Two key factors influence growth potential:
 - **growth plates**
-- hormones, with the main one being the **growth hormone**. 
+- hormones, with the main one being the **growth hormone**.
 
 Growth plates, or growth zones, are located at the ends of the bones in our arms and legs. They're soft layers made up of cartilage tissue.
 
