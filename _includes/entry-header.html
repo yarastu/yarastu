@@ -13,7 +13,8 @@
 <header class="entry-header">
     <a
         title="{{ site.data.i18n['edit'][lang] }} GitHub"
-        href="https://github.com/yarastu/update/blob/gh-pages/_posts/{{- page.date | date: '%Y-%m-%d' -}}-{{- page.slug -}}.markdown"
+        href="https://github.com/yarastu/yarastu/blob/gh-pages/{% if lang == 'en' %}en/{% endif %}_posts/{{ page.date | date: '%Y-%m-%d' }}-{{ page.slug }}.md"
+        target="_blank"
     >
         <i class="fa fa-pencil-alt"></i>&nbsp;{{ site.data.i18n['edit'][lang] }}
     </a>

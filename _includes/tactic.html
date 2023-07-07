@@ -12,9 +12,9 @@
     {% for post in posts %}
       {% assign id = post.slug %}
       {% assign extend = id | append: "-extend" %}
-      {% assign link = id | append: "-link" %} 
+      {% assign link = id | append: "-link" %}
       {% assign copy = id | append: "-copy" %}
-      {% capture img-alt %}{{ post.title }}{% endcapture %} 
+      {% capture img-alt %}{{ post.title }}{% endcapture %}
       <article class="blog-grid-item item-tactic">
         <div class="card card-tactic w-100">
           <div class="maxthumb">
@@ -25,13 +25,13 @@
           <div class="card-body">
             <h3 class="card-title"><a class="text-dark" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
             <p class="card-text">{{ post.beforetoc | truncatewords:20 }}</p>
-            <a 
+            <a
               id="{{- extend -}}"
               href="{{ site.baseurl }}{{ post.url }}"
-              role="button" 
-              class="btn btn-info collapsed" 
-              data-toggle="collapse" 
-              data-target="#{{- id -}}"  
+              role="button"
+              class="btn btn-info collapsed"
+              data-toggle="collapse"
+              data-target="#{{- id -}}"
               >{{ site.data.i18n['tactic-extend'][lang] }}
             </a>
           </div>
@@ -40,40 +40,41 @@
           {{ post.content }}
           <small style="display:flex;flex-direction:row;justify-content:space-between">
             <b>
-              {{ site.data.i18n['tactic-share'][lang] }} 
-              <a 
-                style="color:black;font-weight:normal" 
-                id="{{ copy }}" 
-                class="copy-shareable-link" 
-                title="{{ site.data.i18n['tactic-share'][lang] }} {{ site.data.i18n['tactic-share-copy'][lang] }}" 
-                role="button" 
+              {{ site.data.i18n['tactic-share'][lang] }}
+              <a
+                style="color:black;font-weight:normal"
+                id="{{ copy }}"
+                class="copy-shareable-link"
+                title="{{ site.data.i18n['tactic-share'][lang] }} {{ site.data.i18n['tactic-share-copy'][lang] }}"
+                role="button"
                 href="#"
                 >{{ site.data.i18n['tactic-share-copy'][lang] }}</a>
-              — 
-              <a 
-                style="color:gray;font-weight:normal" 
-                id="{{ link }}" 
-                title="{{ site.data.i18n['tactic-share'][lang] }}" 
+              —
+              <a
+                style="color:gray;font-weight:normal"
+                id="{{ link }}"
+                title="{{ site.data.i18n['tactic-share'][lang] }}"
                 href="{{ site.baseurl }}{{ post.url }}"
                 >{{ site.baseurl }}{{ post.url }}</a>
             </b>
-            <a 
+            <a
               style="color:gray;font-weight:normal"
               class="edit"
-              title="{{ site.data.i18n['edit'][lang] }} GitHub" 
-              href="https://github.com/yarastu/update/blob/gh-pages/_posts/{{- post.date | date: '%Y-%m-%d' -}}-{{- post.slug -}}.markdown"
+              title="{{ site.data.i18n['edit'][lang] }} GitHub"
+              href="https://github.com/yarastu/yarastu/blob/gh-pages/{% if lang == 'en' %}en/{% endif %}_posts/{{ post.date | date: '%Y-%m-%d' }}-{{ post.slug }}.md"
+              target="_blank"
               >{{ site.data.i18n['edit'][lang] }}
             </a>
           </small>
         </div>
       </article>
-      <script> 
+      <script>
         $("#{{- id -}}").on("hide.bs.collapse", function () {
           $("#{{- extend -}}").html("{{ site.data.i18n['tactic-extend'][lang] }}");
         })
         $("#{{- id -}}").on("show.bs.collapse", function () {
           $("#{{- extend -}}").html("{{ site.data.i18n['tactic-less'][lang] }}");
-        })     
+        })
         $("#{{- copy -}}").on("click", function (event) {
           event.preventDefault();
           var $temp = $("<input>");
@@ -82,7 +83,7 @@
           document.execCommand("copy");
           $temp.remove();
           $("#{{- copy -}}").html("{{ site.data.i18n['tactic-share-copied'][lang] }}").css( "color", "green" ).fadeIn(800);
-          setTimeout(function() { 
+          setTimeout(function() {
             $("#{{- copy -}}").html("{{ site.data.i18n['tactic-share-copy'][lang] }}").css( "color", "black" ).fadeIn(800);
           }, 5000);
         })
