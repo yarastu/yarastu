@@ -1,10 +1,10 @@
 ---
 slug: catch-up-growth
 title: "Catch-up growth can close growth zones"
-beforetoc: "If there are sharp growth spurts after a long pause, check the level of sex hormones"
+beforetoc: "If there are sharp growth spurts after a long pause, check the level of sex hormones."
 guide: naturally
 tactic: theory
-updated: 2023-07-04
+updated: 2023-07-09
 ---
 Catch-up growth is when your growth rate speeds up after a pause.
 
