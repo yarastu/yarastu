@@ -68,4 +68,5 @@ function watcher() {
 }
 
 exports.watcher             = watcher;
-exports.default             = series(jekyllBuild, browserSync, watcher);
+exports.default             = img
+// exports.default             = series(jekyllBuild, browserSync, watcher);
