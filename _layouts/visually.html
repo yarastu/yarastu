@@ -1,0 +1,12 @@
+---
+layout: default
+---
+{% assign lang = page.lang %}
+{% assign slug = page.slug %}
+
+{% include guide-header.html %}
+
+{% include tactic.html guide=slug tactic="style" %}
+
+<!-- Lazysizes Img Iframe Lazy Loading -->
+<script src="{{ site.baseurl }}/assets/js/lazysizes.js"></script>

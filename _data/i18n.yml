@@ -7,7 +7,7 @@ site-description:
     en: how to increase height
 more-posts:
     ru: Смотреть все
-    en: View all 
+    en: View all
 findings-header:
     ru: Новые находки
     en: New findings
@@ -31,10 +31,10 @@ search-placeholder:
 search-button:
     ru: Поиск
     en: Go
-search-results-header: 
+search-results-header:
     ru: Результаты поиска для
     en: Search results for
-search-results-no-found: 
+search-results-no-found:
     ru: Ничего не найдено
     en: No results found
 search-nojs:
@@ -61,7 +61,7 @@ article-edited:
     en: Last edited on
 toc-header:
     ru: Содержание
-    en: Table of contents 
+    en: Table of contents
 # Comments
 comments-header:
     ru: Комментарии
@@ -95,7 +95,7 @@ about-contact-name-field:
     en: Name
 about-contact-message-field:
     ru: Сообщение
-    en: Message 
+    en: Message
 about-contact-submit-button:
     ru: Отправить
     en: Submit
@@ -105,10 +105,13 @@ guides-lead:
     en: Free and in-depth tutorials
 guides-warning:
     ru: "Предупреждение о вреде для здоровья: описываемые совет сопряжены с риском, поэтому, прежде чем приступить к ним, сначала проконсультируйтесь с врачом."
-    en: "Health warning: The advice I'm about to give you comes with some risks, so before you jump into it, make sure to talk to a doctor first." 
+    en: "Health warning: The advice I'm about to give you comes with some risks, so before you jump into it, make sure to talk to a doctor first."
 guide-naturally-lead:
     ru: Как получить максимум роста без хирургии при отрытых зонах роста здоровому человеку?
     en: How can you maximize your height growth without surgery when your growth plates are still open?
+guide-visually-lead:
+    ru: Подборка способов, которые улучшат ваш стиль.
+    en: A checklist of ways that will boost your style.
 guide-view:
     ru: Смотреть
     en: View
@@ -130,6 +133,9 @@ tactic-header-sport:
 tactic-header-temperature:
     ru: Температура
     en: Temperature
+tactic-header-style:
+    ru: Стиль
+    en: Style
 tactic-error:
     ru: Материалы не найдены
     en: Materials not found
@@ -141,7 +147,7 @@ tactic-less:
     en: Less
 tactic-share:
     ru: Постоянная ссылка
-    en: Shareable link 
+    en: Shareable link
 tactic-share-copy:
     ru: копировать
     en: copy
