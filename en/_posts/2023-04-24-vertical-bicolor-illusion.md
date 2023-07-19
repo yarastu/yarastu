@@ -4,7 +4,7 @@ title: "Divide two contrasting colors vertically"
 beforetoc: "A two-color division of a rectangle vertically into 2-3 parts creates the effect of elongation."
 guide: visually
 tactic: style
-updated:
+updated: 2023-07-19
 ---
 A rectangle divided into parts is perceived differently.
 
@@ -18,8 +18,8 @@ Try creating an elongated rectangle on the body and divide it vertically into 2-
 
 It is not recommended to divide the colors horizontally, as it reduces height.
 
-{% include image.html name="look-taller-hairstyle" alt="Bicolor illusion in hairstyle to look taller." %}
-
 The same technique can be used for the face. The hair on the sides and the face divide the head into 3 parts. As a result, the middle part narrows.
+
+{% include image.html name="look-taller-hairstyle" alt="Bicolor illusion in hairstyle to look taller." %}
 
 {% include footnotes.html %}
