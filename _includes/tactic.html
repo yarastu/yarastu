@@ -12,6 +12,8 @@
     {% for post in posts %}
       {% assign id = post.slug %}
       {% assign extend = id | append: "-extend" %}
+      {% assign content = id | append: "-content" %}
+      {% assign ajax = id | append: "-ajax" %}
       {% assign link = id | append: "-link" %}
       {% assign copy = id | append: "-copy" %}
       {% capture img-alt %}{{ post.title }}{% endcapture %}
@@ -37,7 +39,7 @@
           </div>
         </div>
         <div id="{{- id -}}" class="collapse collapse-tactic">
-          {{ post.content }}
+          <div id="{{- content -}}"><i id="{{- ajax -}}"></i></div>
           <small style="display:flex;flex-direction:row;justify-content:space-between">
             <b>
               {{ site.data.i18n['tactic-share'][lang] }}
@@ -73,6 +75,21 @@
           $("#{{- extend -}}").html("{{ site.data.i18n['tactic-extend'][lang] }}");
         })
         $("#{{- id -}}").on("show.bs.collapse", function () {
+          $(document).ajaxStart(function() { $("#{{- ajax -}}").html("{{ site.data.i18n['ajax-loading'][lang] }}"); });
+          $.ajax({
+            url: "/{{- id -}}",
+            type: "GET",
+            dataType: "html",
+            success: function(response) {
+              var content = $(response).find(".article-post").html();
+              $("#{{- ajax -}}").hide();
+              $("#{{- content -}}").html(content);
+            },
+            error: function(xhr, status, error) {
+              $("#{{- ajax -}}").html("{{ site.data.i18n['ajax-error'][lang] }} : <a title='' href='{{ site.baseurl }}{{ post.url }}'>{{ site.baseurl }}{{ post.url }}</a>");
+              console.error("Ajax error", error);
+            }
+          });
           $("#{{- extend -}}").html("{{ site.data.i18n['tactic-less'][lang] }}");
         })
         $("#{{- copy -}}").on("click", function (event) {
