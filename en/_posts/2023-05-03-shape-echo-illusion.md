@@ -4,7 +4,7 @@ title: "Improve your unique body shapes by the shape of the accessories"
 beforetoc: "Adjacent objects reflect their shapes onto each other, allowing you to shape desired parts."
 guide: visually
 tactic: style
-updated:
+updated: 2023-09-02
 ---
 Shape of a specific part extends to the neighboring part.
 
@@ -27,6 +27,10 @@ Researchers have found that when outer corners of eyebrows are raised, outer cor
 {% include image.html name="shape-echo-glasses" alt="Shape of glasses can elongate the face" %}
 
 It is likely that similar result can be achieved with shape of eyeglass frames.
+
+#### Shoes with a pointed toe make the legs appear longer
+
+If the toe of shoes is long and narrow, then legs will also appear longer along with them.
 
 #### Neck and face also reflect each other
 
