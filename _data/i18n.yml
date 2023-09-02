@@ -11,6 +11,9 @@ more-posts:
 findings-header:
   ru: Новые находки
   en: New findings
+timeago:
+  ru: дн назад
+  en: d ago
 # Menu
 nav-header:
   ru: Навигация
@@ -106,6 +109,12 @@ guides-lead:
 guides-warning:
   ru: "Предупреждение о вреде для здоровья: описываемые совет сопряжены с риском, поэтому, прежде чем приступить к ним, сначала проконсультируйтесь с врачом."
   en: "Health warning: The advice I'm about to give you comes with some risks, so before you jump into it, make sure to talk to a doctor first."
+guide-naturally-tag:
+  ru: натурально
+  en: naturally
+guide-visually-tag:
+  ru: визуально
+  en: visually
 guide-naturally-lead:
   ru: Как получить максимум роста без хирургии при отрытых зонах роста здоровому человеку?
   en: How can you maximize your height growth without surgery when your growth plates are still open?

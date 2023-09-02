@@ -77,7 +77,7 @@
         $("#{{- id -}}").on("show.bs.collapse", function () {
           $(document).ajaxStart(function() { $("#{{- ajax -}}").html("{{ site.data.i18n['ajax-loading'][lang] }}"); });
           $.ajax({
-            url: "/{{- id -}}",
+            url: "{% if lang == 'en' %}/en{% endif %}/{{- id -}}",
             type: "GET",
             dataType: "html",
             success: function(response) {

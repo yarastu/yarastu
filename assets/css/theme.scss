@@ -371,6 +371,29 @@ img, img:hover {
         padding: 0;
     }
 }
+.card-home {
+  .card-tag {
+    margin-bottom: 0.75rem;
+    padding: 3px;
+    background-color: $gray-bg;
+    font-weight:400;
+    font-size:16px;
+    line-height:1.8;
+  }
+  .card-title {
+    margin-top: 15px;
+  }
+}
+.card-date {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  font-size: 0.9rem;
+  background-color: rgba(23,164,184,.5);
+  padding: 3px 5px;
+  border-bottom-right-radius: 5px;
+  color: $gray-bg;
+}
 .collapse small {
     display: -webkit-box;
     display: -webkit-flex;
@@ -880,7 +903,7 @@ body.active-side {
         .card-title {
             font-size: 17px;
         }
-        .card-text, button {
+        .card-tag,.card-text, button {
             font-size: 14px;
         }
     }
@@ -898,6 +921,12 @@ body.active-side {
         .card-title, .card-title a {
             font-size: 1rem;
         }
+    }
+    .card-date {
+      width: 100px;
+      top: 120px;
+      font-size: 0.7rem;
+      ;
     }
     .card-title a, .home-entries .home-entries-more a {
         font-size: 1rem;
@@ -942,6 +971,10 @@ body.active-side {
             height:70px;
         }
     }
+    .card-date {
+      width: 70px;
+      top: 90px;
+    }
     .site-content {
         padding-top:0;
     }
@@ -969,7 +1002,6 @@ body.active-side {
         margin-right: 1rem !important;
         color: inherit;
     }
-
     #menu ul {
         padding: 80px 30px 80px 30px;
     }
