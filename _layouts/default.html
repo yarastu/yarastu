@@ -51,8 +51,8 @@
 <nav id="menu" class="nojs">
     <ul>
         <li><a title="{{ site.data.i18n['nav-li-home'][lang] }}" {% if page.slug != "home" %}href="{{ site.baseurl }}/{% if lang == 'en' %}en/{% endif %}"{% else %}class="menu-active-color"{% endif %}>{{ site.data.i18n['nav-li-home'][lang] }}</a></li>
-        <li><a title="{{ site.data.i18n['nav-li-about'][lang] }}" {% if page.slug != "about" %}href="{{ site.baseurl }}/about"{% else %}class="menu-active-color"{% endif %}>{{ site.data.i18n['nav-li-about'][lang] }}</a></li>
-        <li><a title="{{ site.data.i18n['nav-li-guides'][lang] }}" {% if page.slug != "guides" %}href="{{ site.baseurl }}/guides"{% else %}class="menu-active-color"{% endif %}>{{ site.data.i18n['nav-li-guides'][lang] }}</a></li>
+        <li><a title="{{ site.data.i18n['nav-li-about'][lang] }}" {% if page.slug != "about" %}href="{{ site.baseurl }}/{% if lang == 'en' %}en/{% endif %}about"{% else %}class="menu-active-color"{% endif %}>{{ site.data.i18n['nav-li-about'][lang] }}</a></li>
+        <li><a title="{{ site.data.i18n['nav-li-guides'][lang] }}" {% if page.slug != "guides" %}href="{{ site.baseurl }}/{% if lang == 'en' %}en/{% endif %}guides"{% else %}class="menu-active-color"{% endif %}>{{ site.data.i18n['nav-li-guides'][lang] }}</a></li>
     </ul>
 </nav>
 <!-- Search and lang link -->
