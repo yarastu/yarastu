@@ -1,36 +1,36 @@
 <!-- Comments
 ================================================== -->
-{% if page.disqus != false and jekyll.environment == 'production' %}
-<div class="comments mt-5">     
-  <div id="comments">  
-    <h4 class="mb-4">{{ site.data.i18n['comments-header'][lang] }}</h4>         
-    <div class="disqus_placeholder lazyload-nojs">
-      <i class="fas fa-circle-notch fa-spin"></i>&nbsp;{{ site.data.i18n['comments-loading'][lang] }}
+{% if page.comments != false and jekyll.environment == 'production' %}
+  <div class="comments mt-5">
+    <div id="comments">
+      <h4 class="mb-4">{{ site.data.i18n['comments-header'][lang] }}</h4>
+      <div class="disqus_placeholder lazyload-nojs">
+        <i class="fas fa-circle-notch fa-spin"></i>&nbsp;{{ site.data.i18n['comments-loading'][lang] }}
+      </div>
+      <div id="disqus_thread" class="lazyload-nojs"></div>
+      <noscript>
+        {{ site.data.i18n['comments-nojs'][lang] }}
+      </noscript>
     </div>
-    <div id="disqus_thread" class="lazyload-nojs"></div>
-    <noscript>
-      {{ site.data.i18n['comments-nojs'][lang] }}
-    </noscript>
-  </div>      
-  <div class="clearfix"></div>        
-</div>  
-<!-- Lazy Loader Disqus -->
-<script src="{{baseurl}}/assets/js/disqusloader.js"></script>
-<script>
-disqusLoader( '#disqus_thread', { 
-  scriptUrl: '//{{site.disqus}}.disqus.com/embed.js', 
-  disqusConfig: function() {
-    this.page.identifier  = '{{ page.slug }}';
-    this.language = "{{ lang }}";
-    // Loading Indication
-    this.callbacks.onReady = [function() {
-      var el = document.querySelector( '.disqus_placeholder' );
-      if( el.classList )
-        el.classList.add( 'disqus_placeholder--hidden' ); // IE 10+
-      else
-        el.className += ' ' + 'disqus_placeholder--hidden'; // IE 8-9
-    }];
-  } 
-});
-</script> 
+    <div class="clearfix"></div>
+  </div>
+  <!-- Lazy Loader Disqus -->
+  <script src="{{baseurl}}/assets/js/disqusloader.js"></script>
+  <script>
+    disqusLoader( '#disqus_thread', {
+      scriptUrl: '//{{site.disqus}}.disqus.com/embed.js',
+      disqusConfig: function() {
+        this.page.identifier  = '{{ page.slug }}';
+        this.language = "{{ lang }}";
+        // Loading Indication
+        this.callbacks.onReady = [function() {
+          var el = document.querySelector( '.disqus_placeholder' );
+          if( el.classList )
+            el.classList.add( 'disqus_placeholder--hidden' ); // IE 10+
+          else
+            el.className += ' ' + 'disqus_placeholder--hidden'; // IE 8-9
+        }];
+      }
+    });
+  </script>
 {% endif %}

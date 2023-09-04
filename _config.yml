@@ -45,17 +45,19 @@ defaults:
     values:
       lang: ru
       toc: false
+      comments: false
       layout: post
   - scope:
       type: "posts"
       path: "en"
     values:
       lang: en
+      comments: false
   - scope:
       type: "pages"
     values:
-      comments: false
       lang: ru
+      comments: false
   - scope:
       type: "pages"
       path: "en"

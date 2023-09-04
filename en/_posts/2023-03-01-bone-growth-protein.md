@@ -1,10 +1,10 @@
 ---
 slug: bone-growth-protein
 title:  "Choose animal-based protein"
-beforetoc: "Get 1.5 grams of protein per kilogram of body weight per day, mainly from animal products."
+beforetoc: "Get 1.5 grams of protein per kilogram of body weight per day. Mainly from animal products."
 guide: naturally
 tactic: food
-updated: 2023-07-04
+updated: 2023-09-04
 ---
 Protein is a building material for tissues and hormones.
 
