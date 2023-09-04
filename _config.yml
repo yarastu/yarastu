@@ -15,18 +15,6 @@ podcast: "https://podcasts.apple.com/ru/podcast/%D1%8F-%D1%80%D0%B0%D1%81%D1%82%
 permalink: /:categories/:title
 email: vadim@yarastu.ru
 
-# Authors
-authors:
-  vadim:
-    login: vadim
-    name: Вадим Дмитриев
-    display_name: Вадим
-    avatar: vadim.jpg
-    email: vadim@yarastu.ru
-    web: "https://yarastu.ru"
-    twitter: "https://twitter.com/yarasty8"
-    description: Делюсь идеями, как вырасти ребенку, подростку, взрослому.
-
 # Plugins
 plugins:
   - jekyll-sitemap
