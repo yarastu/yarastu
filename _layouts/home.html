@@ -11,7 +11,7 @@ layout: default
 <div class="authorbox">
   <div class="row">
     <div class="wrapavname col-3 col-xl-2">
-      <img src="{{ site.baseurl }}/assets/images/vadim.jpg" alt="{{ site.data.i18n['vadim'][lang] }}">
+      <img src="{{ site.url }}/assets/images/vadim.jpg" alt="{{ site.data.i18n['vadim'][lang] }}">
     </div>
     <div class="col-9 col-xl-10">
       <h4>{{ site.data.i18n['hello'][lang] }}</h4>
@@ -20,37 +20,6 @@ layout: default
   </div>
 </div>
 
-<!-- Guides
-================================================== -->
-<section class="home-entries">
-  <h2>{{ site.data.i18n['nav-li-guides'][lang] }}</h2>
-  <article class="blog-grid-container">
-    {% for post in guides limit: 3 %}
-      {% capture img-name %}{{ post.slug }}{% endcapture %}
-      {% capture img-alt %}{{ post.title }}{% endcapture %}
-      <article class="blog-grid-item">
-        <div class="card h-100 w-100">
-          <div class="maxthumb">
-            <a href="{{ site.baseurl }}{{ post.url }}">
-              {% include thumbnail.html name=img-name alt=img-alt %}
-            </a>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title"><a class="text-dark" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
-          </div>
-        </div>
-      </article>
-    {% endfor %}
-    {% if guides.size > 3 %}
-    <article class="blog-grid-item home-entries-more">
-      <div class="card h-100 w-100">
-        <a class="text-dark" href="{{ site.baseurl }}/{% if lang == 'en' %}en/{% endif %}guides">{{ site.data.i18n['more-posts'][lang] }}&nbsp;({{ guides.size }})&nbsp;»</a>
-      </div>
-    </article>
-    {% endif %}
-  </article>
-</section>
-
 <!-- New findings
 ================================================== -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -58,7 +27,7 @@ layout: default
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <article class="home-entries guides-entries">
   <h2>{{ site.data.i18n['findings-header'][lang] }}</h2>
-  {% for post in tactics limit: 3 %}
+  {% for post in tactics limit: 5 %}
     {% assign id = post.slug %}
     {% assign extend = id | append: "-extend" %}
     {% assign content = id | append: "-content" %}
@@ -72,7 +41,7 @@ layout: default
     <article class="blog-grid-item item-tactic">
       <div class="card card-tactic w-100">
         <div class="maxthumb">
-          <a href="{{ site.baseurl }}{{ post.url }}">
+          <a href="{{ site.url }}{{ post.url }}">
             {% include thumbnail.html name=img-name alt=img-alt %}
           </a>
           <time
@@ -84,11 +53,11 @@ layout: default
         </div>
         <div class="card-body card-home">
           <span class="card-tag">{{ site.data.i18n[guide-tag][lang] }}</span>
-          <h3 class="card-title"><a class="text-dark" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+          <h3 class="card-title"><a class="text-dark" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h3>
           <p class="card-text">{{ post.beforetoc | truncatewords:20 }}</p>
           <a
             id="{{- extend -}}"
-            href="{{ site.baseurl }}{{ post.url }}"
+            href="{{ site.url }}{{ post.url }}"
             role="button"
             class="btn btn-info collapsed"
             data-toggle="collapse"
@@ -115,8 +84,8 @@ layout: default
               style="color:gray;font-weight:normal"
               id="{{ link }}"
               title="{{ site.data.i18n['tactic-share'][lang] }}"
-              href="{{ site.baseurl }}{{ post.url }}"
-              >{{ site.baseurl }}{{ post.url }}</a>
+              href="{{ site.url }}{{ post.url }}"
+              >{{ site.url }}{{ post.url }}</a>
           </b>
           <a
             style="color:gray;font-weight:normal"
@@ -145,7 +114,7 @@ layout: default
             $("#{{- content -}}").html(content);
           },
           error: function(xhr, status, error) {
-            $("#{{- ajax -}}").html("{{ site.data.i18n['ajax-error'][lang] }} : <a title='' href='{{ site.baseurl }}{{ post.url }}'>{{ site.baseurl }}{{ post.url }}</a>");
+            $("#{{- ajax -}}").html("{{ site.data.i18n['ajax-error'][lang] }} : <a title='' href='{{ site.url }}{{ post.url }}'>{{ site.url }}{{ post.url }}</a>");
             console.error("Ajax error", error);
           }
         });
@@ -183,4 +152,35 @@ layout: default
   });
 </script>
 <!-- Lazysizes Img Iframe Lazy Loading -->
-<script src="{{ site.baseurl }}/assets/js/lazysizes.js"></script>
+<script src="{{ site.url }}/assets/js/lazysizes.js"></script>
+
+<!-- Guides
+================================================== -->
+<section class="home-entries">
+  <h2>{{ site.data.i18n['nav-li-guides'][lang] }}</h2>
+  <article class="blog-grid-container">
+    {% for post in guides limit: 3 %}
+      {% capture img-name %}{{ post.slug }}{% endcapture %}
+      {% capture img-alt %}{{ post.title }}{% endcapture %}
+      <article class="blog-grid-item">
+        <div class="card h-100 w-100">
+          <div class="maxthumb">
+            <a href="{{ site.url }}{{ post.url }}">
+              {% include thumbnail.html name=img-name alt=img-alt %}
+            </a>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title"><a class="text-dark" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h3>
+          </div>
+        </div>
+      </article>
+    {% endfor %}
+    {% if guides.size > 3 %}
+    <article class="blog-grid-item home-entries-more">
+      <div class="card h-100 w-100">
+        <a class="text-dark" href="{{ site.url }}/{% if lang == 'en' %}en/{% endif %}guides">{{ site.data.i18n['more-posts'][lang] }}&nbsp;({{ guides.size }})&nbsp;»</a>
+      </div>
+    </article>
+    {% endif %}
+  </article>
+</section>

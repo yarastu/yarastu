@@ -4,18 +4,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="icon" href="{{ site.baseurl }}/assets/images/logo.png">
+  <link rel="icon" href="{{ site.url }}/assets/images/logo.png">
   <noscript>
     <style>
       .nojs { display: none!important; }
     </style>
   </noscript>
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/theme.css">
+  <link rel="stylesheet" href="{{ site.url }}/assets/css/theme.css">
   <title>{{ page.title }} | {{ site.data.i18n['name'][lang] }}</title>
   <!-- Linked posts -->
   {% assign posts = site.posts | where:"slug", page.slug | sort: 'lang' %}
   {% if posts.size == 0 %} {% assign posts = site.pages | where:"slug", page.slug | sort: 'lang' %} {% endif %}
-  {% for post in posts %} <link rel="alternate" hreflang="{{ post.lang }}" href="{{ site.baseurl }}{{ post.url }}">{% endfor %}
+  {% for post in posts %} <link rel="alternate" hreflang="{{ post.lang }}" href="{{ site.url }}{{ post.url }}">{% endfor %}
   <!-- SEO tag -->
   {% seo title=false %}
   <!-- Google Analytics -->
@@ -48,9 +48,9 @@
 <div id="blackover-nav" class="blackover nojs"></div>
 <nav id="menu" class="nojs">
   <ul>
-    <li><a title="{{ site.data.i18n['nav-li-home'][lang] }}" {% if page.slug != "home" %}href="{{ site.baseurl }}/{% if lang == 'en' %}en/{% endif %}"{% else %}class="menu-active-color"{% endif %}>{{ site.data.i18n['nav-li-home'][lang] }}</a></li>
-    <li><a title="{{ site.data.i18n['nav-li-about'][lang] }}" {% if page.slug != "about" %}href="{{ site.baseurl }}/{% if lang == 'en' %}en/{% endif %}about"{% else %}class="menu-active-color"{% endif %}>{{ site.data.i18n['nav-li-about'][lang] }}</a></li>
-    <li><a title="{{ site.data.i18n['nav-li-guides'][lang] }}" {% if page.slug != "guides" %}href="{{ site.baseurl }}/{% if lang == 'en' %}en/{% endif %}guides"{% else %}class="menu-active-color"{% endif %}>{{ site.data.i18n['nav-li-guides'][lang] }}</a></li>
+    <li><a title="{{ site.data.i18n['nav-li-home'][lang] }}" {% if page.slug != "home" %}href="{{ site.url }}/{% if lang == 'en' %}en/{% endif %}"{% else %}class="menu-active-color"{% endif %}>{{ site.data.i18n['nav-li-home'][lang] }}</a></li>
+    <li><a title="{{ site.data.i18n['nav-li-about'][lang] }}" {% if page.slug != "about" %}href="{{ site.url }}/{% if lang == 'en' %}en/{% endif %}about"{% else %}class="menu-active-color"{% endif %}>{{ site.data.i18n['nav-li-about'][lang] }}</a></li>
+    <li><a title="{{ site.data.i18n['nav-li-guides'][lang] }}" {% if page.slug != "guides" %}href="{{ site.url }}/{% if lang == 'en' %}en/{% endif %}guides"{% else %}class="menu-active-color"{% endif %}>{{ site.data.i18n['nav-li-guides'][lang] }}</a></li>
   </ul>
 </nav>
 <!-- Search and lang link -->
@@ -72,10 +72,10 @@
   ================================================== -->
   <a class="navbar-brand"
     {% if page.url != '/' and page.url != '/en/' %}
-      href="{{ site.baseurl }}/{% if lang == 'en'%}en/{%endif %}"
+      href="{{ site.url }}/{% if lang == 'en'%}en/{%endif %}"
     {%endif %}
   >
-    <img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.data.i18n['name'][lang] }}">
+    <img src="{{ site.url }}/{{ site.logo }}" alt="{{ site.data.i18n['name'][lang] }}">
   </a>
 
   <!-- Site Tag
@@ -121,7 +121,7 @@
           title="{{ site.data.i18n['name'][lang] }}"
           class="text-dark"
           {% if page.url != '/' and page.url != '/en/' %}
-            href="{{ site.baseurl }}/{% if lang == 'en'%}en/{%endif %}"
+            href="{{ site.url }}/{% if lang == 'en'%}en/{%endif %}"
           {%endif %}
         >
           {{ site.data.i18n['name'][lang] }}
@@ -138,8 +138,8 @@
 
 </div> <!-- /.site-content -->
 
-<script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
-<script src="{{ site.baseurl }}/assets/js/theme.js"></script>
+<script src="{{ site.url }}/assets/js/jquery.min.js"></script>
+<script src="{{ site.url }}/assets/js/theme.js"></script>
 
 </body>
 </html>

@@ -2,12 +2,12 @@
 ================================================== -->
 <noscript>
 <style>
-  .nav-nojs { 
+  .nav-nojs {
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;
-    display: flex; 
+    display: flex;
     list-style: none;
     padding: inherit;
   }
@@ -16,36 +16,36 @@
 <nav>
     <ul class="nav-nojs">
         <li>
-            <a {% if page.slug != "home" %}href="{{ site.baseurl }}/"{% else %}style="color: #8e9aa7"{% endif %} title="{{ site.data.i18n['nav-li-home'][lang] }}">
+            <a {% if page.slug != "home" %}href="{{ site.url }}/"{% else %}style="color: #8e9aa7"{% endif %} title="{{ site.data.i18n['nav-li-home'][lang] }}">
                 {{ site.data.i18n['nav-li-home'][lang] }}
             </a>
         </li>
         <li>
-            <a {% if page.slug != "about" %}href="{{ site.baseurl }}about"{% else %}style="color: #8e9aa7"{% endif %} title="{{ site.data.i18n['nav-li-about'][lang] }}">
+            <a {% if page.slug != "about" %}href="{{ site.url }}about"{% else %}style="color: #8e9aa7"{% endif %} title="{{ site.data.i18n['nav-li-about'][lang] }}">
                 {{ site.data.i18n['nav-li-about'][lang] }}
             </a>
         </li>
         <li>
-            <a {% if page.slug != "guides" %} href="{{ site.baseurl }}guides"{% else %}style="color: #8e9aa7"{% endif %} title="{{ site.data.i18n['nav-li-guides'][lang] }}">
+            <a {% if page.slug != "guides" %} href="{{ site.url }}guides"{% else %}style="color: #8e9aa7"{% endif %} title="{{ site.data.i18n['nav-li-guides'][lang] }}">
                 {{ site.data.i18n['nav-li-guides'][lang] }}
             </a>
-        </li>  
+        </li>
         {% for post in posts %}
             {% if post.lang != lang %}
                 <li>
-                    <a title="{{ post.lang }}" href="{{ site.baseurl }}{{ post.url }}">{{ post.lang }}</a>
-                </li>      
+                    <a title="{{ post.lang }}" href="{{ site.url }}{{ post.url }}">{{ post.lang }}</a>
+                </li>
             {% endif %}
         {% endfor %}
         <li>
-            <a 
+            <a
                 {% if page.slug != "search" %}
-                    href="{{ site.baseurl }}search"
+                    href="{{ site.url }}search"
                 {% endif %}
             >
                 <i class="fas fa-search show-search"></i>
             </a>
         </li>
-    </ul>   
+    </ul>
 </nav>
 </noscript>

@@ -4,26 +4,26 @@ layout: default
 {% assign lang = page.lang %}
 {% assign posts = site.pages | where: "type", "guide" | where: "lang", lang %}
 
-<header class="entry-header">       
-  <h1>{{ page.title }}</h1>        
-  <p class="guides-lead">{{ site.data.i18n['guides-lead'][lang] }}</p>    
+<header class="entry-header">
+  <h1>{{ page.title }}</h1>
+  <p class="guides-lead">{{ site.data.i18n['guides-lead'][lang] }}</p>
 </header>
-    
+
 <article class="blog-grid-container guides-entries">
   {% for post in posts %}
     {% capture img-name %}{{ post.slug }}{% endcapture %}
-    {% capture img-alt %}{{ post.title }}{% endcapture %} 
+    {% capture img-alt %}{{ post.title }}{% endcapture %}
     <article class="blog-grid-item item-guide">
       <div class="card card-guide w-100">
         <div class="maxthumb">
-          <a href="{{ site.baseurl }}{{ post.url }}">
+          <a href="{{ site.url }}{{ post.url }}">
             {% include thumbnail.html name=img-name alt=img-alt %}
           </a>
         </div>
         <div class="card-body">
-          <h3 class="card-title"><a class="text-dark" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+          <h3 class="card-title"><a class="text-dark" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h3>
           <p class="card-text">{{ post.beforetoc | truncatewords:20 }}</p>
-          <a href="{{ site.baseurl }}{{ post.url }}" class="btn btn-outline-secondary" title="{{ post.title }}">{{ site.data.i18n['guide-view'][lang] }}</a>
+          <a href="{{ site.url }}{{ post.url }}" class="btn btn-outline-secondary" title="{{ post.title }}">{{ site.data.i18n['guide-view'][lang] }}</a>
         </div>
       </div>
     </article>

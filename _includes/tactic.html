@@ -20,16 +20,16 @@
       <article class="blog-grid-item item-tactic">
         <div class="card card-tactic w-100">
           <div class="maxthumb">
-            <a href="{{ site.baseurl }}{{ post.url }}">
+            <a href="{{ site.url }}{{ post.url }}">
               {% include thumbnail.html name=id alt=img-alt %}
             </a>
           </div>
           <div class="card-body">
-            <h3 class="card-title"><a class="text-dark" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+            <h3 class="card-title"><a class="text-dark" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h3>
             <p class="card-text">{{ post.beforetoc | truncatewords:20 }}</p>
             <a
               id="{{- extend -}}"
-              href="{{ site.baseurl }}{{ post.url }}"
+              href="{{ site.url }}{{ post.url }}"
               role="button"
               class="btn btn-info collapsed"
               data-toggle="collapse"
@@ -56,8 +56,8 @@
                 style="color:gray;font-weight:normal"
                 id="{{ link }}"
                 title="{{ site.data.i18n['tactic-share'][lang] }}"
-                href="{{ site.baseurl }}{{ post.url }}"
-                >{{ site.baseurl }}{{ post.url }}</a>
+                href="{{ site.url }}{{ post.url }}"
+                >{{ site.url }}{{ post.url }}</a>
             </b>
             <a
               style="color:gray;font-weight:normal"
@@ -86,7 +86,7 @@
               $("#{{- content -}}").html(content);
             },
             error: function(xhr, status, error) {
-              $("#{{- ajax -}}").html("{{ site.data.i18n['ajax-error'][lang] }} : <a title='' href='{{ site.baseurl }}{{ post.url }}'>{{ site.baseurl }}{{ post.url }}</a>");
+              $("#{{- ajax -}}").html("{{ site.data.i18n['ajax-error'][lang] }} : <a title='' href='{{ site.url }}{{ post.url }}'>{{ site.url }}{{ post.url }}</a>");
               console.error("Ajax error", error);
             }
           });

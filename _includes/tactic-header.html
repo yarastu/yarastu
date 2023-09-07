@@ -4,7 +4,7 @@
 {% for guide in guides %}
   <a
     class="breadcrumbs"
-    href="{{ site.baseurl }}/{% if lang == 'en' %}en/{% endif %}guides/{{page.guide}}"
+    href="{{ site.url }}/{% if lang == 'en' %}en/{% endif %}guides/{{page.guide}}"
     title="{{ guide.title }}"
     >
       <i class="fas fa-arrow-left">&nbsp;</i>&nbsp;{{ guide.title }}

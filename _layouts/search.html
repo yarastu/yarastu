@@ -3,14 +3,14 @@ layout: default
 ---
 {% assign lang = page.lang %}
 
-<script src="{{ site.baseurl }}/assets/js/lunr.js"></script>
-<script src="{{ site.baseurl }}/assets/js/lunr.stemmer.support.js"></script>
-<script src="{{ site.baseurl }}/assets/js/lunr.ru.js"></script>
-<script src="{{ site.baseurl }}/assets/js/lunr.multi.js"></script>
-<script src="{{ site.baseurl }}/assets/js/lunr-index.js"></script>
+<script src="{{ site.url }}/assets/js/lunr.js"></script>
+<script src="{{ site.url }}/assets/js/lunr.stemmer.support.js"></script>
+<script src="{{ site.url }}/assets/js/lunr.ru.js"></script>
+<script src="{{ site.url }}/assets/js/lunr.multi.js"></script>
+<script src="{{ site.url }}/assets/js/lunr-index.js"></script>
 
 <script>
-function lunr_search(term) {    
+function lunr_search(term) {
     document.getElementById('lunrsearchresults').innerHTML = '<article><ul></ul></article>';
     if(term) {
         document.getElementById('lunrsearchresults').innerHTML = "<h2>{{ site.data.i18n['search-results-header'][lang] }} '" + term + "'</h2>" + document.getElementById('lunrsearchresults').innerHTML;
@@ -25,19 +25,19 @@ function lunr_search(term) {
                 var url = documents[ref]['url'];
                 var title = documents[ref]['title'];
                 var body = documents[ref]['body'].substring(0,160)+'...';
-                document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML + "<li class='lunrsearchresult'> <article class='card-body'> <a class='text-dark' href='{{ site.baseurl }}" + url + "'> <h3 class='card-title'>" + title + "</h3></a> <p>" + body + "</p> </article></li>";
+                document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML + "<li class='lunrsearchresult'> <article class='card-body'> <a class='text-dark' href='{{ site.url }}" + url + "'> <h3 class='card-title'>" + title + "</h3></a> <p>" + body + "</p> </article></li>";
             }
         } else {
             document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = "<li class='lunrsearchresult'>{{ site.data.i18n['search-results-no-found'][lang] }}</li>";
         }
     }
     return false;
-}    
+}
 </script>
 
 <div class="page-single">
-    <div class="entry-header">       
-        <h1>{{ page.title }}</h1>        
+    <div class="entry-header">
+        <h1>{{ page.title }}</h1>
     </div>
 </div>
 
@@ -47,13 +47,13 @@ function lunr_search(term) {
 
 <div class="article-post nojs">
     <form class="page-search d-flex align-items-center" onSubmit="return lunr_search(document.getElementById('lunrsearch-page').value);">
-        <input 
-            type="text" 
+        <input
+            type="text"
             id="lunrsearch-page"
-            class="form-control" 
-            name="q" 
-            maxlength="255" 
-            value="" 
+            class="form-control"
+            name="q"
+            maxlength="255"
+            value=""
             placeholder="{{ site.data.i18n['search-placeholder'][lang] }}"
         >
         <button class="form-control">{{ site.data.i18n['search-button'][lang] }}</button>

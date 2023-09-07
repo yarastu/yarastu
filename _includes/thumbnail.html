@@ -6,55 +6,55 @@
 {% if name %}
 
   {% capture alt %} {% if include.alt %} alt="{{ include.alt }}" {% endif %} {% endcapture %}
-  
+
   {% assign svg             = name | append: ".svg" %}
   {% assign svg-thumb       = name | append: "-thumb.svg" %}
   {% assign jpg350w-thumb   = name | append: "-thumb@350w.jpg" %}
-  {% assign jpg700w-thumb   = name | append: "-thumb@700w.jpg" %}                
+  {% assign jpg700w-thumb   = name | append: "-thumb@700w.jpg" %}
   {% assign webp350w-thumb  = name | append: "-thumb@350w.webp" %}
-  {% assign webp700w-thumb  = name | append: "-thumb@700w.webp" %}    
-  
+  {% assign webp700w-thumb  = name | append: "-thumb@700w.webp" %}
+
   {% assign files                 = site.static_files | where: "image", true %}
   {% assign exist--svg              = files | where: "name", svg | first %}
   {% assign exist--svg-thumb        = files | where: "name", svg-thumb | first %}
   {% assign exist--jpg350w-thumb    = files | where: "name", jpg350w-thumb | first %}
   {% assign exist--jpg700w-thumb    = files | where: "name", jpg700w-thumb | first %}
   {% assign exist--webp350w-thumb   = files | where: "name", webp350w-thumb | first %}
-  {% assign exist--webp700w-thumb   = files | where: "name", webp700w-thumb | first %} 
+  {% assign exist--webp700w-thumb   = files | where: "name", webp700w-thumb | first %}
 
-  {% if exist--jpg350w-thumb %} 
-  
+  {% if exist--jpg350w-thumb %}
+
   <picture>
     {% if exist--svg-thumb %}
-      <source 
-        type="image/svg+xml" 
-        srcset="{{ site.baseurl }}/assets/images/{{ name }}/{{ svg-thumb }}"
+      <source
+        type="image/svg+xml"
+        srcset="{{ site.url }}/assets/images/{{ name }}/{{ svg-thumb }}"
         >
         {% elsif exist--svg %}
-          <source 
-            type="image/svg+xml" 
-            srcset="{{ site.baseurl }}/assets/images/{{ name }}/{{ svg }}"
-            >        
+          <source
+            type="image/svg+xml"
+            srcset="{{ site.url }}/assets/images/{{ name }}/{{ svg }}"
+            >
     {% endif %}
     {% if exist--webp350w-thumb %}
-      <source 
+      <source
         type="image/webp"
-        srcset="{% if exist--webp700w-thumb %}{{ site.baseurl }}/assets/images/{{ name }}/{{ webp700w-thumb }} 2x,{% endif %}
-          {{ site.baseurl }}/assets/images/{{ name }}/{{ webp350w-thumb }} 1x"
+        srcset="{% if exist--webp700w-thumb %}{{ site.url }}/assets/images/{{ name }}/{{ webp700w-thumb }} 2x,{% endif %}
+          {{ site.url }}/assets/images/{{ name }}/{{ webp350w-thumb }} 1x"
         >
       {% endif %}
         <img
-          class="img-thumb" 
+          class="img-thumb"
           width="200"
-          height="200" 
-          {{ alt }} 
-          src="{{ site.baseurl }}/assets/images/{{ name }}/{{ jpg350w-thumb }}" 
+          height="200"
+          {{ alt }}
+          src="{{ site.url }}/assets/images/{{ name }}/{{ jpg350w-thumb }}"
           {% if exist--jpg1400w %}
-            srcset="{{ site.baseurl }}/assets/images/{{ name }}/{{ jpg700w-thumb }} 2x" 
+            srcset="{{ site.url }}/assets/images/{{ name }}/{{ jpg700w-thumb }} 2x"
           {% endif %}
           >
   </picture>
-                        
+
   {% else %} <p>an image didn't load / изображение не загрузилось</p>
   {% endif %}
 {% endif %}
