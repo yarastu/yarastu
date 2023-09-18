@@ -4,7 +4,7 @@ title: "Create a unified vertical silhouette using monochromatic clothing"
 beforetoc: "The observer's view glides smoothly over solid-colored clothing, creating the impression of a taller stature."
 guide: visually
 tactic: style
-updated:
+updated: 2023-09-18
 ---
 Objects appear connected when similar in color and brightness.
 
@@ -17,8 +17,6 @@ When scanning a monochromatic outfit, our eyes move seamlessly. For example, usi
 However, if an object is interrupted during vertical scanning, the eyes stops, and the perceived height decreases.
 
 {% include image.html name="monochromaticity-outfit-taller" alt="The observer's view glides smoothly over solid-colored clothing, creating the impression of a taller stature." %}
-
-In one study, participants rated a person wearing monochromatic clothing as taller than a person wearing contrasting colors for the top and bottom.
 
 > wearing a uniform color gives a person approximately an extra half inch in perceived stature[^moo-2018158]
 

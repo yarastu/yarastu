@@ -172,3 +172,6 @@ tactic-share-copy:
 tactic-share-copied:
   ru: скопировано
   en: copied
+tactic-warning:
+  ru: "Имеются противопоказания. Необходима консультация специалиста."
+  en: "There are contraindications. Consultation with specialist required."

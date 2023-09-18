@@ -1,3 +1,13 @@
+<!-- Appendix
+================================================== -->
+{% assign app = include.app %}
+
+{% if app %}
+  {% capture type %}tactic-{{ app }}{% endcapture %}
+
+  <i>{{ site.data.i18n[type][page.lang] }}</i>
+{% endif %}
+
 <!-- Footnotes
 ================================================== -->
 {% assign slug = page.slug %}
