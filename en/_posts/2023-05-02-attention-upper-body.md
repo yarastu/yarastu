@@ -4,7 +4,7 @@ title: "Attract attention to the top of your body"
 beforetoc: "Direct the observer's sight to the area of your head and attractive parts of your body."
 guide: visually
 tactic: style
-updated: 2023-08-23
+updated: 2023-09-27
 ---
 Body evaluation can change due to the observer's attention shift.
 
@@ -16,7 +16,7 @@ Studies show that when looking at a person, our attention is often directed towa
 
 {% include image.html name="eye-movements-attractiveness" alt="Eye movement while assessing attractiveness" caption="Picture. Eye movement while assessing a person's body. The left picture represents the gaze of women, while the right picture represents the gaze of men. Red dots indicate the most attractive areas." %}
 
-Try to direct the observer's attention to your neck and head. There is a peculiarity that the line of vision is attracted to the noticeable part. For example, you can achieve this by selecting accessories such as **glasses, brooches, and also a hairstyle**. A more saturated color is better, for example, red or any reflective color.[^aub-101093]
+Try to direct the observer's attention to your neck and head. There is a peculiarity that the line of vision is attracted to the noticeable part. For example, you can achieve this by selecting accessories such as **glasses, brooches, and also a hairstyle**. A more saturated color is better, for example, red or any reflective color.[^aub-101093] Black outfits are also attracting more attention to the upper body.[^aub-103338]
 
 {% include image.html name="emphasis-head-area" alt="Direct the viewer's attention to the upper part of the body" caption="Picture. Flower on head directs viewer's gaze upward, diverting attention from hip width." %}
 
