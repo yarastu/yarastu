@@ -30,7 +30,6 @@ img {
     max-width:100%;
     height:auto;
 }
-
 h1,h2,h3,h4,h5,h6 {
     font-weight:700;
 }
@@ -575,9 +574,18 @@ p.guides-lead {
   margin: 50px auto
 }
 
-.collapse-tactic figure {
-  margin-top:30px;
-  margin-bottom:30px;
+.collapse-tactic {
+    figure, table {
+      margin-top:30px;
+      margin-bottom:30px;
+    }
+    table {
+      margin-left: 30px;
+      th, td {
+        padding: 10px 15px;
+        border: 1px solid $black;
+      }
+    }
 }
 
 .article-post,
@@ -616,9 +624,16 @@ p.guides-lead {
 
 .article-post {
     font-size:18px;
-    p, figure, form {
+    p, figure, form, table {
         margin-top:30px;
         margin-bottom:30px;
+    }
+    table {
+      margin-left: 30px;
+      th, td {
+        padding: 10px 15px;
+        border: 1px solid $black;
+      }
     }
     .footnotes {
       background-color: #ced4da;
