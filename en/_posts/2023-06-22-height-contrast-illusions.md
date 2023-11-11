@@ -4,7 +4,7 @@ title: "Create situations when the comparison is in your favor"
 beforetoc: "You will look better next to someone shorter and less attractive."
 guide: visually
 tactic: style
-updated:
+updated: 2023-11-11
 ---
 We compare neighboring objects relative to each other.
 
@@ -28,6 +28,6 @@ Other examples of the contrast illusion:
 
 It is quite possible that we unconsciously surround ourselves with less competitive opponents during mating games, just like animals do.[^hci-101093] For example, male guppies swim with less colorful peers in the presence of females, and crabs swim with smaller ones. Similarly, we can increase our chances of success in a bar or nightclub by appearing with less attractive partners.
 
-However, I wouldn't rely entirely on this strategy when it comes to friendship. Taller friends often have more resources and can share them. Moreover, they can bend down in photos if you ask them to. In many situations, friendship is more advantageous. It is better to choose friends based on their qualities and character, not just based on appearance.
+However, I wouldn't rely entirely on this strategy when it comes to friendship. Taller friends often have more resources and can share them. In many situations, friendship is more advantageous. It is better to choose friends based on their qualities and character, not just based on appearance.
 
 {% include footnotes.html %}
