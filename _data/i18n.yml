@@ -142,6 +142,9 @@ tactic-header-sport:
 tactic-header-temperature:
   ru: Температура
   en: Temperature
+tactic-header-sleep:
+  ru: Сон
+  en: Sleep
 tactic-header-style:
   ru: Стиль
   en: Style
