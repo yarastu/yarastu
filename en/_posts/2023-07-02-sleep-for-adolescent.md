@@ -4,13 +4,15 @@ title: "Adolescent need a different sleep schedule"
 beforetoc: "Adolescent tend to go to bed and wake up late, which leads to sleep deprivation. Don't let it happen."
 guide: naturally
 tactic: sleep
-updated:
+updated: 2023-11-21
 ---
 Each age group has its own sleep schedule.
 
 From birth until the onset of puberty (typically before ages 8–9), we go to bed early and wake up early.
 
 During sexual maturity, circadian rhythms shift forward *by 2-3 hours*. As a result, we go to bed late and wake up late.
+
+> asking your teenage son or daughter to go to bed and fall asleep at ten p.m. is the circadian equivalent of asking you, their parent, to go to sleep at seven or eight p.m.
 
 > a change that is common across all adolescents, irrespective of culture or geography.[^sfa-scribner17]
 
