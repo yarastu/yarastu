@@ -44,14 +44,16 @@ layout: default
           <a href="{{ site.url }}{{ post.url }}">
             {% include thumbnail.html name=img-name alt=img-alt %}
           </a>
-          <time
-            class="card-date"
-            data-date="{{ date | date: '%Y-%m-%d' }}"
-            datetime="{{ date | date_to_xmlschema }}"
-            >{% include date.html date=date %}
-          </time>
         </div>
         <div class="card-body card-home">
+          {% if forloop.first %}
+            <time
+              class="card-date"
+              data-date="{{ date | date: '%Y-%m-%d' }}"
+              datetime="{{ date | date_to_xmlschema }}"
+              >{% include date.html date=date %}
+            </time>
+          {% endif %}
           <span class="card-tag">{{ site.data.i18n[guide-tag][lang] }}</span>
           <h3 class="card-title"><a class="text-dark" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h3>
           <p class="card-text">{{ post.beforetoc | truncatewords:20 }}</p>

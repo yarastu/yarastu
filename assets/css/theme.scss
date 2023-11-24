@@ -260,6 +260,9 @@ img, img:hover {
     .item-tactic {
       margin-top: 30px;
     }
+    .collapse-tactic {
+      margin-left: 220px;
+    }
 }
 
 .blog-grid-container {
@@ -296,6 +299,7 @@ img, img:hover {
 
 .blog-grid-item {
     color: #333;
+    background-color: #fff;
     padding: 0;
     display: flex;
     align-items:center;
@@ -372,9 +376,6 @@ img, img:hover {
 }
 .card-home {
   .card-tag {
-    margin-bottom: 0.75rem;
-    padding: 3px;
-    background-color: $gray-bg;
     font-weight:400;
     font-size:16px;
     line-height:1.8;
@@ -384,14 +385,11 @@ img, img:hover {
   }
 }
 .card-date {
-  position: absolute;
-  top: 1.25rem;
-  left: 1.25rem;
-  font-size: 0.9rem;
-  background-color: rgba(23,164,184,.5);
+  margin-right: 10px;
   padding: 3px 5px;
   border-bottom-right-radius: 5px;
   color: $gray-bg;
+  background-color: rgba(23,164,184,.5);
 }
 .collapse small {
     display: -webkit-box;
@@ -887,7 +885,12 @@ body.active-side {
         font-size: 35px;
     }
     .home-entries h2 {
-        font-size: 1.5rem;
+      font-size: 1.5rem;
+    }
+    .home-entries.guides-entries {
+      .collapse-tactic {
+        margin-left: 120px;
+      }
     }
     .entry-header {
         a {
@@ -918,7 +921,7 @@ body.active-side {
         .card-title {
             font-size: 17px;
         }
-        .card-tag,.card-text, button {
+        .card-date,.card-tag,.card-text, button {
             font-size: 14px;
         }
     }
@@ -936,12 +939,6 @@ body.active-side {
         .card-title, .card-title a {
             font-size: 1rem;
         }
-    }
-    .card-date {
-      width: 100px;
-      top: 120px;
-      font-size: 0.7rem;
-      ;
     }
     .card-title a, .home-entries .home-entries-more a {
         font-size: 1rem;
@@ -967,6 +964,11 @@ body.active-side {
     .container {
         padding-left:15px;
     }
+    .home-entries.guides-entries {
+      .collapse-tactic {
+        margin-left: 90px;
+      }
+    }
     .entry-header {
         padding: 0;
     }
@@ -985,10 +987,6 @@ body.active-side {
         .img-thumb {
             height:70px;
         }
-    }
-    .card-date {
-      width: 70px;
-      top: 90px;
     }
     .site-content {
         padding-top:0;
