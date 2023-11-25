@@ -890,7 +890,7 @@ body.active-side {
     }
     .home-entries.guides-entries {
       .collapse-tactic {
-        margin-left: 120px;
+        margin-left: 0;
       }
     }
     .entry-header {
@@ -964,11 +964,6 @@ body.active-side {
     }
     .container {
         padding-left:15px;
-    }
-    .home-entries.guides-entries {
-      .collapse-tactic {
-        margin-left: 90px;
-      }
     }
     .entry-header {
         padding: 0;
