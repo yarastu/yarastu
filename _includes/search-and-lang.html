@@ -5,6 +5,7 @@
         {% for post in posts %}
           {% if post.lang != lang %}
             <a title="{{ post.lang }}" class="translate" href="{{ site.url }}{{ post.url }}">{{ post.lang }}</a>
+            {% break %}
           {% endif %}
         {% endfor %}
         <i class="fas fa-search show-search"></i>

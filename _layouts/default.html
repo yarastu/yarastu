@@ -13,9 +13,17 @@
   <link rel="stylesheet" href="{{ site.url }}/assets/css/theme.css">
   <title>{{ page.title }} | {{ site.data.i18n['name'][lang] }}</title>
   <!-- Linked posts -->
-  {% assign posts = site.posts | where:"slug", page.slug | sort: 'lang' %}
-  {% if posts.size == 0 %} {% assign posts = site.pages | where:"slug", page.slug | sort: 'lang' %} {% endif %}
-  {% for post in posts %} <link rel="alternate" hreflang="{{ post.lang }}" href="{{ site.url }}{{ post.url }}">{% endfor %}
+  {% assign posts = site.posts | where: "slug", page.slug %} <!-- posts -->
+  {% if posts.size == 0 %} {% assign posts = site.pages | where: "slug", page.slug %} {% endif %} <!-- pages -->
+  {% for post in posts %}
+    {% if post.url == "/" or post.url == "/en/" %}
+      <link rel="alternate" hreflang="ru" href="{{ site.url }}/">
+      <link rel="alternate" hreflang="en" href="{{ site.url }}/en/">
+      {% break %}
+    {% else %}
+      <link rel="alternate" hreflang="{{ post.lang }}" href="{{ site.url }}{{ post.url }}">
+    {% endif %}
+  {% endfor %}
   <!-- SEO tag -->
   {% seo title=false %}
   <!-- Google Analytics -->

@@ -2,59 +2,34 @@
 layout: default
 ---
 {% assign lang = page.lang %}
-{% assign guides = site.pages | where: "type", "guide" | where: "lang", lang %}
-{% assign tactics = site.posts | where: "lang", lang %}
+{% assign posts = site.posts | where: "lang", lang %}
 
-<!-- Author
-================================================== -->
-{% assign author = site.authors['vadim'] %}
-<div class="authorbox">
-  <div class="row">
-    <div class="wrapavname col-3 col-xl-2">
-      <img src="{{ site.url }}/assets/images/vadim.jpg" alt="{{ site.data.i18n['vadim'][lang] }}">
-    </div>
-    <div class="col-9 col-xl-10">
-      <h4>{{ site.data.i18n['hello'][lang] }}</h4>
-      <p class="mt-3 mb-0">{{ site.data.i18n['hello-lead'][lang] }}</p>
-    </div>
-  </div>
-</div>
+<header class="entry-header">
+  <h1>{{ page.title }}</h1>
+  <p class="guides-lead">{{ site.data.i18n['tactics-lead'][lang] }}</p>
+</header>
 
-<!-- New findings
-================================================== -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<article class="home-entries guides-entries">
-  <h2>{{ site.data.i18n['findings-header'][lang] }}</h2>
-  {% for post in tactics limit: 5 %}
+
+<article class="blog-grid-container guides-entries">
+  {% for post in posts %}
     {% assign id = post.slug %}
     {% assign extend = id | append: "-extend" %}
     {% assign content = id | append: "-content" %}
     {% assign ajax = id | append: "-ajax" %}
     {% assign link = id | append: "-link" %}
     {% assign copy = id | append: "-copy" %}
-    {% capture date %}{{ post.date }}{% endcapture %}
-    {% capture img-name %}{{ post.slug }}{% endcapture %}
     {% capture img-alt %}{{ post.title }}{% endcapture %}
-    {% capture guide-tag %}guide-{{ post.guide }}-tag{% endcapture %}
     <article class="blog-grid-item item-tactic">
       <div class="card card-tactic w-100">
         <div class="maxthumb">
           <a href="{{ site.url }}{{ post.url }}">
-            {% include thumbnail.html name=img-name alt=img-alt %}
+            {% include thumbnail.html name=id alt=img-alt %}
           </a>
         </div>
-        <div class="card-body card-home">
-          {% if forloop.first %}
-            <time
-              class="card-date"
-              data-date="{{ date | date: '%Y-%m-%d' }}"
-              datetime="{{ date | date_to_xmlschema }}"
-              >{% include date.html date=date %}
-            </time>
-          {% endif %}
-          <span class="card-tag">{{ site.data.i18n[guide-tag][lang] }}</span>
+        <div class="card-body">
           <h3 class="card-title"><a class="text-dark" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h3>
           <p class="card-text">{{ post.beforetoc | truncatewords:20 }}</p>
           <a
@@ -136,59 +111,7 @@ layout: default
       })
     </script>
   {% endfor %}
-  <div class="blog-grid-item item-tactic home-entries-more home-entries-more--first">
-    <div class="card h-100 w-100">
-      <a class="text-dark" href="{{ site.url }}/{% if lang == 'en' %}en/{% endif %}tactics">{{ site.data.i18n['more-posts'][lang] }}&nbsp;»</a>
-    </div>
-  </div>
 </article>
-<script>
-  function countDaysFromDate(date) {
-    var currentDate = new Date();
-    var inputDate = new Date(date);
-    var timeDiff = Math.abs(currentDate.getTime() - inputDate.getTime());
-    var oneDay = 24 * 60 * 60 * 1000;
-    var diffDays = Math.floor(timeDiff / oneDay);
-    return diffDays;
-  }
-  var cardDates = document.querySelectorAll(".card-date");
-  cardDates.forEach(function(cardDate) {
-    var inputDate = cardDate.getAttribute("data-date");
-    var daysPassed = countDaysFromDate(inputDate);
-    cardDate.innerHTML = daysPassed + "{{ site.data.i18n['timeago'][lang] }}";
-  });
-</script>
-
-<!-- Guides
-================================================== -->
-<section class="home-entries">
-  <h2>{{ site.data.i18n['nav-li-guides'][lang] }}</h2>
-  <article class="blog-grid-container">
-    {% for post in guides limit: 3 %}
-      {% capture img-name %}{{ post.slug }}{% endcapture %}
-      {% capture img-alt %}{{ post.title }}{% endcapture %}
-      <article class="blog-grid-item">
-        <div class="card h-100 w-100">
-          <div class="maxthumb">
-            <a href="{{ site.url }}{{ post.url }}">
-              {% include thumbnail.html name=img-name alt=img-alt %}
-            </a>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title"><a class="text-dark" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h3>
-          </div>
-        </div>
-      </article>
-    {% endfor %}
-    {% if guides.size > 3 %}
-    <article class="blog-grid-item home-entries-more">
-      <div class="card h-100 w-100">
-        <a class="text-dark" href="{{ site.url }}/{% if lang == 'en' %}en/{% endif %}guides">{{ site.data.i18n['more-posts'][lang] }}&nbsp;({{ guides.size }})&nbsp;»</a>
-      </div>
-    </article>
-    {% endif %}
-  </article>
-</section>
 
 <!-- Lazysizes Img Iframe Lazy Loading -->
 <script src="{{ site.url }}/assets/js/lazysizes.js"></script>

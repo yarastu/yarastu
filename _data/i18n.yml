@@ -102,6 +102,10 @@ about-contact-message-field:
 about-contact-submit-button:
   ru: Отправить
   en: Submit
+# Tactics
+tactics-lead:
+  ru: Простые и емкие фрагменты
+  en: Simple and bite-size snippets
 # Guides
 guides-lead:
   ru: Бесплатные и подробные руководства

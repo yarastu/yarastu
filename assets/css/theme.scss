@@ -232,26 +232,29 @@ img, img:hover {
 
 // blog grid
 .home-entries {
-    article {
-        margin-top: 15px;
+  article {
+    margin-top: 15px;
+  }
+  .home-entries-more {
+    .card {
+      background-color: inherit;
     }
-    .home-entries-more {
-        .card {
-            background-color: inherit;
-        }
-        a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            width: 100%;
-            text-align: center;
-            font-weight:700;
-            font-size:19px;
-            line-height: 1.4;
-            padding: 1.25rem;
-        }
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      font-weight:700;
+      font-size:19px;
+      line-height: 1.4;
+      padding: 1.25rem;
     }
+  }
+  .home-entries-more--first {
+    border: 0;
+  }
 }
 
 .home-entries.guides-entries {
