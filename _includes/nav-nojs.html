@@ -16,17 +16,17 @@
 <nav>
     <ul class="nav-nojs">
         <li>
-            <a {% if page.slug != "home" %}href="{{ site.url }}/"{% else %}style="color: #8e9aa7"{% endif %} title="{{ site.data.i18n['nav-li-home'][lang] }}">
+            <a {% if page.slug != "home" %}href="{{ site.url }}/{% if lang == 'en' %}en/{% endif %}"{% else %}style="color: #8e9aa7"{% endif %} title="{{ site.data.i18n['nav-li-home'][lang] }}">
                 {{ site.data.i18n['nav-li-home'][lang] }}
             </a>
         </li>
         <li>
-            <a {% if page.slug != "about" %}href="{{ site.url }}about"{% else %}style="color: #8e9aa7"{% endif %} title="{{ site.data.i18n['nav-li-about'][lang] }}">
+            <a {% if page.slug != "about" %}href="{{ site.url }}/{% if lang == 'en' %}en/{% endif %}about"{% else %}style="color: #8e9aa7"{% endif %} title="{{ site.data.i18n['nav-li-about'][lang] }}">
                 {{ site.data.i18n['nav-li-about'][lang] }}
             </a>
         </li>
         <li>
-            <a {% if page.slug != "guides" %} href="{{ site.url }}guides"{% else %}style="color: #8e9aa7"{% endif %} title="{{ site.data.i18n['nav-li-guides'][lang] }}">
+            <a {% if page.slug != "guides" %} href="{{ site.url }}/{% if lang == 'en' %}en/{% endif %}guides"{% else %}style="color: #8e9aa7"{% endif %} title="{{ site.data.i18n['nav-li-guides'][lang] }}">
                 {{ site.data.i18n['nav-li-guides'][lang] }}
             </a>
         </li>
@@ -40,7 +40,7 @@
         <li>
             <a
                 {% if page.slug != "search" %}
-                    href="{{ site.url }}search"
+                    href="{{ site.url }}/{% if lang == 'en' %}en/{% endif %}search"
                 {% endif %}
             >
                 <i class="fas fa-search show-search"></i>

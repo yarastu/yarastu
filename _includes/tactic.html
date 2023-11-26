@@ -21,7 +21,7 @@
         <div class="card card-tactic w-100">
           <div class="maxthumb">
             <a href="{{ site.url }}{{ post.url }}">
-              {% include thumbnail.html name=id alt=img-alt %}
+              {% include thumbnail.html name=id alt=img-alt lazy="true" %}
             </a>
           </div>
           <div class="card-body">

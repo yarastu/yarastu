@@ -2,6 +2,7 @@
 ================================================== -->
 
 {% assign name = include.name %}
+{% assign lazy = include.lazy %}
 
 {% if name %}
 
@@ -14,7 +15,7 @@
   {% assign webp350w-thumb  = name | append: "-thumb@350w.webp" %}
   {% assign webp700w-thumb  = name | append: "-thumb@700w.webp" %}
 
-  {% assign files                 = site.static_files | where: "image", true %}
+  {% assign files                   = site.static_files | where: "image", true %}
   {% assign exist--svg              = files | where: "name", svg | first %}
   {% assign exist--svg-thumb        = files | where: "name", svg-thumb | first %}
   {% assign exist--jpg350w-thumb    = files | where: "name", jpg350w-thumb | first %}
@@ -24,6 +25,40 @@
 
   {% if exist--jpg350w-thumb %}
 
+  {% if lazy %}
+  <picture class="nojs"> <!-- if JS enable -->
+    {% if exist--svg-thumb %}
+      <source
+        type="image/svg+xml"
+        data-srcset="{{ site.url }}/assets/images/{{ name }}/{{ svg-thumb }}"
+        >
+        {% elsif exist--svg %}
+          <source
+            type="image/svg+xml"
+            data-srcset="{{ site.url }}/assets/images/{{ name }}/{{ svg }}"
+            >
+    {% endif %}
+    {% if exist--webp350w-thumb %}
+      <source
+        type="image/webp"
+        data-srcset="{% if exist--webp700w-thumb %}{{ site.url }}/assets/images/{{ name }}/{{ webp700w-thumb }} 2x,{% endif %}
+          {{ site.url }}/assets/images/{{ name }}/{{ webp350w-thumb }} 1x"
+        >
+      {% endif %}
+        <img
+          class="img-thumb lazyload"
+          width="200"
+          height="200"
+          {{ alt }}
+          data-src="{{ site.url }}/assets/images/{{ name }}/{{ jpg350w-thumb }}"
+          {% if exist--jpg1400w %}
+            data-srcset="{{ site.url }}/assets/images/{{ name }}/{{ jpg700w-thumb }} 2x"
+          {% endif %}
+          >
+  </picture>
+  {% endif %}
+
+  {% if lazy %} <noscript> <!-- if JS disabled --> {% endif %}
   <picture>
     {% if exist--svg-thumb %}
       <source
@@ -44,6 +79,7 @@
         >
       {% endif %}
         <img
+          loading="lazy"
           class="img-thumb"
           width="200"
           height="200"
@@ -54,6 +90,7 @@
           {% endif %}
           >
   </picture>
+  {% if lazy %} </noscript> {% endif %}
 
   {% else %} <p>an image didn't load / изображение не загрузилось</p>
   {% endif %}
