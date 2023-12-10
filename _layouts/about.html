@@ -3,28 +3,19 @@ layout: default
 ---
 {% assign lang = page.lang %}
 
-<div class="page-single">
-    <div class="entry-header">
-        <h1>{{ page.title }}</h1>
+<header class="entry-header">
+  <h1>{{ page.title }}</h1>
+  <div class="row">
+    <div class="col-3 col-3--reset col-md-4">
+      <img src="{{ site.url }}/assets/images/vadim.png" alt="{{ site.data.i18n['vadim'][lang] }}">
     </div>
-</div>
-
-<!-- Стоим на плечах гигантов. Мои персональные любимцы naturalheightgrowth.com Рустам Ахметов -->
+    <div class="col-9 col-md-8">
+      <p>{{ site.data.i18n['about-lead-1'][lang] }}</p>
+      <p>{{ site.data.i18n['about-lead-2'][lang] }}</p>
+    </div>
+  </div>
+</header>
 
 <div class="article-post">
-    <form action="https://formspree.io/f/meqwgnkv" method="POST">
-    <p class="mb-4">{{ site.data.i18n['about-contact-header'][lang] }}</p>
-    <div class="form-group row">
-    <div class="col-md-6">
-    <input class="form-control" type="text" name="name" placeholder="{{ site.data.i18n['about-contact-name-field'][lang] }}*" required>
-    </div>
-    <div class="col-md-6">
-    <input class="form-control" type="email" name="_replyto" placeholder="Email*" required>
-    </div>
-    </div>
-    <textarea rows="8" class="form-control mb-3" name="message" placeholder="{{ site.data.i18n['about-contact-message-field'][lang] }}*" required></textarea>
-    <input class="btn btn-dark" type="submit" value="{{ site.data.i18n['about-contact-submit-button'][lang] }}">
-    </form>
+  {{ content }}
 </div>
-
-{{ content }}
