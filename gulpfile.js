@@ -7,8 +7,8 @@ const webp                                     = require('gulp-webp');
 const resize                                   = require('gulp-image-resize');
 const rename                                   = require('gulp-rename');
 const newer                                    = require('gulp-newer');
-
-
+const babel                                    = require('gulp-babel');
+const uglify                                   = require('gulp-uglify');
 
 function jekyllBuild(done) {
   exec('jekyll build', function (error, stdout, stderr) {
@@ -21,7 +21,6 @@ function jekyllBuild(done) {
     done();
   });
 }
-
 exports.jekyllBuild = jekyllBuild;
 
 function browserSync() {
@@ -33,6 +32,19 @@ function browserSync() {
   });
 }
 exports.browserSync = browserSync;
+
+function scripts() {
+  return src('assets/js/*min.js')
+  .pipe(rename(function (path) {
+    if(path.basename != 'jquery.min' ) {
+      path.basename = path.basename.slice(0, -4);
+    }
+  }))
+  .pipe(newer('assets/js'))
+  .pipe(uglify())
+  .pipe(dest('assets/js'))
+}
+exports.js = scripts;
 
 function img(cb) {
   [700, 1400].forEach(function (size) {

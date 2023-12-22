@@ -14,7 +14,7 @@ var documents = [
             {% assign counter = counter | plus: 1 %}
         }
         {% if forloop.last %}
-        {% else %}, 
+        {% else %},
         {% endif %}
     {% endfor %}
 ];
