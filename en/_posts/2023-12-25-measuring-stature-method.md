@@ -4,7 +4,7 @@ title: "Measure your height, considering diurnal variations in stature"
 beforetoc: "Measure yourself consistently with the same device, in the afternoon, at the same time, repeating multiple times."
 guide: naturally
 tactic: theory
-updated:
+updated: 2023-12-30
 ---
 We reach our maximum height right after waking up.
 
@@ -38,7 +38,7 @@ It's better to have someone else assist you. The technique is as follows:[^msm-1
 2. The shoulder blades and buttocks touch the vertical backboard of the stadiometer.
 3. Keep heels together, and feet at a 30–45° angle.
 4. Relax your arms, palms facing your torso.
-5. Pull your chin slightly toward your body and stretch upward. The line between your eye sockets and ear canal should be parallel to the floor.
+5. Pull your chin slightly toward your body and stretch upward. The line between your eye sockets and ear canal (*frankfurt plane*) should be parallel to the floor.
 6. Look straight ahead.
 7. Take the measurement.
 
