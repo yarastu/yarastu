@@ -4,7 +4,7 @@ title: "Stretch the crown of your head upward"
 beforetoc: "Gently push your chin towards the chest and stretch upward to achieve your maximum height during the day."
 guide: visually
 tactic: style
-updated:
+updated: 2024-01-01
 ---
 Throughout the day, there is a natural reduction in height.
 
@@ -12,9 +12,9 @@ In the morning after sleep, the intervertebral discs are straightened, and the m
 
 By the end of the day, the body fatigues and is unable to keep an upright posture, leading to a decrease in stature.
 
-To achieve your maximum height at any time, lengthen your vertebral column — relax your shoulders and stretch the crown of your head upward. Think about runway models, and it will be clearer what I mean.
+To achieve your maximum height at any time, lengthen your vertebral column — relax your shoulders and stretch the crown of your head upward. Think about runway models, and it will be clearer what type of posture I mean.
 
-This advice given by doctors to regain height after diurnal variation.[^rmh-774319] When measuring height, a doctor presses on the patient's mastoid process and gently pulls the head up.
+This advice given by doctors to regain height after diurnal variation.[^rmh-774319] When measuring height, a doctor presses on the patient's mastoid process (the area behind earlobe, see photo below) and gently pulls the head up.
 
 > This technique minimizes variation in posture due to tiredness, which may otherwise amount to 1 or even 2 cm.[^rmh-46250745]
 
@@ -26,7 +26,7 @@ Hold your head, shoulders, buttocks, calves, and heels against the wall.
 
 {% include image.html name="regain-stature-height" alt="Recovering daily height loss" %}
 
-Try to tuck your chin in, aligning it with your forehead. The line between the highest point of the auditory meatus (the mastoid process is located nearby) and lowest point of the eye socket should be parallel to the floor. This line is called the *Frankfurt plane*.
+Try to tuck your chin in, aligning it with your forehead. The line between the highest point of the auditory meatus and lowest point of the eye socket should be parallel to the floor. This line is also called the *Frankfurt plane*.
 
 {% include image.html name="head-frankfurt-plane" alt="Frankfurt plane" %}
 
