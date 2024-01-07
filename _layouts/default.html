@@ -119,10 +119,10 @@
 <footer class="footer">
   <div class="container">
     <div class="row">
-      <div class="col-md-6 col-sm-12 text-center text-lg-left">
+      <div class="col-md-6 col-sm-12 my-3 text-center text-lg-left">
         {{ site.time | date: "%Y" }} <a title="{{ site.email }}" target="_blank" class="d-inline-block mx-1 text-dark" href="mailto:{{ site.email }}">{{ site.email }}</a>
       </div>
-      <div class="col-md-6 col-sm-12 text-center text-lg-right">
+      <div class="col-md-6 col-sm-12 my-3 text-center text-lg-right">
         <a
           title="{{ site.data.i18n['name'][lang] }}"
           class="text-dark"
@@ -132,8 +132,8 @@
         >
           {{ site.data.i18n['name'][lang] }}
         </a>
-        <a title="Youtube" target="_blank" class="d-inline-block mx-1 text-dark" href="{{ site.youtube }}"><i class="fab fa-youtube"></i></a>
-        <a title="Podcast" target="_blank" class="d-inline-block mx-1 text-dark" href="{{ site.podcast }}"><i class="fa fa-podcast"></i></a>
+        <a title="Youtube" target="_blank" class="d-inline-block mx-3 text-dark" href="{{ site.youtube }}"><i class="fab fa-youtube"></i> {{ site.data.i18n['link-youtube'][lang] }}</a>
+        <a title="Podcast" target="_blank" class="d-inline-block text-dark" href="{{ site.podcast }}"><i class="fa fa-podcast"></i> {{ site.data.i18n['link-podcast'][lang] }}</a>
       </div>
     </div>
   </div>

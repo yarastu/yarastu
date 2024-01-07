@@ -185,3 +185,10 @@ tactic-share-copied:
 tactic-warning:
   ru: "Имеются противопоказания. Необходима консультация специалиста."
   en: "There are contraindications. Consultation with specialist required."
+# Footer
+link-youtube:
+  ru: "Ютуб"
+  en: "YouTube"
+link-podcast:
+  ru: "Подкаст"
+  en: "Podcast"
