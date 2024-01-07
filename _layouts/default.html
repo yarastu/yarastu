@@ -26,6 +26,7 @@
   {% endfor %}
   <!-- SEO tag -->
   {% seo title=false %}
+  {% if jekyll.environment == 'production' %}
   <!-- Google Tag Manager -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KH4PHHWZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
@@ -34,7 +35,6 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KH4PHHWZ');</script>
-  {% if jekyll.environment == 'production' %}
   {% endif %}
   {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
 </head>
@@ -142,9 +142,6 @@
 ================================================== -->
 
 </div> <!-- /.site-content -->
-
-<script src="{{ site.url }}/assets/js/jquery.min.js"></script>
-<script src="{{ site.url }}/assets/js/theme.js"></script>
 
 </body>
 </html>
