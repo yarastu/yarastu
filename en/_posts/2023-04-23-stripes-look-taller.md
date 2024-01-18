@@ -4,7 +4,7 @@ title: "Horizontal stripes can effectively elongate just like vertical stripes"
 beforetoc: "Wear horizontal or vertical stripes if you have a slim figure, and vertical stripes if you are overweight."
 guide: visually
 tactic: style
-updated: 2023-12-10
+updated: 2024-01-18
 ---
 Which of the two squares is *higher*?
 
@@ -26,6 +26,6 @@ Therefore, for a slim body, it seems optimal to wear thin horizontal lines that 
 
 {% include image.html name="stripes-outfit-taller" alt="Stripes outfit to appear taller" %}
 
-For wider body sizes, use vertical thin stripes.[^slt-24349693]
+For wider body sizes, use vertical stripes.[^slt-24349693]
 
 {% include footnotes.html %}
