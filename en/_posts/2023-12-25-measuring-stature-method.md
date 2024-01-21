@@ -4,11 +4,11 @@ title: "Measure your height, considering diurnal variations in stature"
 beforetoc: "Measure yourself consistently with the same device, in the afternoon, at the same time, repeating multiple times."
 guide: naturally
 tactic: theory
-updated: 2023-12-30
+updated: 2024-01-21
 ---
 We reach our maximum height right after waking up.
 
-After sleep, intervertebral discs straighten, and muscles relax. We are full of energy and maintain maximum height for about 2 hours.
+After sleep, intervertebral discs straighten, and muscles restored. We are full of energy and maintain maximum height for about 2 hours.
 
 Throughout the day, the spine compresses, and muscles get tired. We lose up to 3 cm, mainly in the torso.[^msm-774319]
 
