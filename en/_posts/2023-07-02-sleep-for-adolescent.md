@@ -1,10 +1,10 @@
 ---
 slug: sleep-for-adolescent
 title: "Adolescent need a different sleep schedule"
-beforetoc: "Adolescent tend to go to bed and wake up late, which leads to sleep deprivation. Don't let it happen."
+beforetoc: "Adolescent tend to go to bed and wake up late, which leads to sleep deprivation."
 guide: naturally
 tactic: sleep
-updated: 2023-11-21
+updated: 2024-01-31
 ---
 Each age group has its own sleep schedule.
 
