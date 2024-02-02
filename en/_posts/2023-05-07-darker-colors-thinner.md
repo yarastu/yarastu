@@ -4,7 +4,7 @@ title: "Choose accent colors brighter and main colors darker"
 beforetoc: "Bright colors reflect more light and appear wider. Use brighter colors for accents and darker as the main ones."
 guide: visually
 tactic: style
-updated:
+updated: 2024-02-02
 ---
 According to the *lightness illusion*, light colors expand objects, while dark colors narrow them.
 
@@ -19,6 +19,10 @@ Research has found that light hair color can visually reduce body height, blur f
 #### Darker clothing slims the body
 
 Clothing has a similar effect. Dark colors visually make people appear a few kilograms lighter.[^dct-8438770][^dct-9241513] The effect is enhanced if there is a dark background behind the person.
+
+#### Black and red colors are attractive
+
+In the study, 6 dress colors — black, gray, white, red, green, and blue — black and red enhanced body attractiveness. The same colors, along with blue, added a slimming effect. Conversely, green and gray had the opposite effect. [^dct-103338]
 
 #### Brighter clothing attracts attention
 
