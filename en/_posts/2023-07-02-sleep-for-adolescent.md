@@ -4,7 +4,7 @@ title: "Adolescent need a different sleep schedule"
 beforetoc: "Adolescent tend to go to bed and wake up late, which leads to sleep deprivation."
 guide: naturally
 tactic: sleep
-updated: 2024-01-31
+updated: 2024-02-06
 ---
 Each age group has its own sleep schedule.
 
@@ -20,7 +20,7 @@ After puberty, rhythms return to normal.
 
 **Why did nature make teenagers "night owls"?**
 
-One of the curious explanations suggested by Professor Matthew Walker is to separate children from their parents. When parents sleep at night, a teenager are experiencing the burst of energy and can *independently* explore the world for several hours.
+Maybe this strange phenomenon has formed during the process of evolution to separate children from their parents. When parents sleep at night, a teenager are experiencing the burst of energy and can *independently* explore the world for several hours.
 
 In our times, this leads to sleep deprivation among adolescents because, after a short night's sleep, they are forced to wake up early in the morning for school.
 

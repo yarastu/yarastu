@@ -4,17 +4,19 @@ title: "Collaborative practices are more effective than individual ones"
 beforetoc: "Involve friends in your activities to split up the problems. Be part of communities."
 guide: naturally
 tactic: mental
-updated:
+updated: 2024-02-06
 ---
 We often exaggerate complexity of the future tasks.
 
-In one study, participants overestimated hill slant by three times when standing in front of it.[^ssc-200804011] Climbing hill seemed difficult, so they overestimated its steepness.
+In one study, participants overestimated hill slant by two times when standing in front of it.[^ssc-200804011] Climbing hill seemed difficult, so they overestimated its steepness.
 
 However, the hill appeared less steep to those who were with a friend.
 
 Why?
 
 Subconsciously, we believe that climbing a hill together is easier because our friend will share part of the problems.
+
+{% include image.html name="social-support-study" alt="Study. Social support and perception of geographical slope" caption="Image. Study on the influence of social support on the perception of hill slant (Schnall et al., 2008). On the graph, the solid column represents the participant's assessment without a friend. The other column represents the participant's assessment with a friend. The horizontal line represents the actual slant of the hill (26°)." %}
 
 #### Engage friends in activities
 
