@@ -42,9 +42,7 @@ When people come together, for example, rowers in boat during race, their brains
 
 {% include image.html name="teamwork-elevate-pain-threshold" alt="Working in team elevates pain threshold" %}
 
-Teamwork is also more effective. For example, in one experiment, disadvantaged students were taught to work together while studying mathematics, and they soon caught up to the knowledge level of their classmates. On the other hand, those who studied alone were more likely to give up.
-
-> When students work together (learning math, science, languages, English—anything), they get opportunities to make connections between ideas, which is inherently valuable for them.[^ssc-boaler2019]
+Teamwork is also more effective. For example, in one experiment, disadvantaged students were taught to work together while studying mathematics, and they soon caught up to the knowledge level of their classmates. On the other hand, those who studied alone were more likely to give up.[^ssc-boaler2019]
 
 #### Look for online communities
 
