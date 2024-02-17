@@ -613,16 +613,19 @@ p.guides-lead {
     }
   }
   sup {
-      &:after {
-        content: "]";
-      }
-      &:before {
-        content: "[";
-      }
-      a {
-        color: $black;
-      }
+    &:after {
+      content: "]";
     }
+    &:before {
+      content: "[";
+    }
+    a {
+      color: $black;
+    }
+    +sup {
+      padding-left: 5px;
+    }
+  }
 }
 
 .article-post {

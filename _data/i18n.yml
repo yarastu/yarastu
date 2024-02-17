@@ -155,6 +155,9 @@ tactic-header-temperature:
 tactic-header-sleep:
   ru: Сон
   en: Sleep
+tactic-header-other:
+  ru: Прочее
+  en: Other
 tactic-header-style:
   ru: Стиль
   en: Style
