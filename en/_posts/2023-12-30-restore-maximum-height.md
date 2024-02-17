@@ -4,7 +4,7 @@ title: "Stretch the crown of your head upward"
 beforetoc: "Gently push your chin towards the chest and stretch upward to achieve your maximum height during the day."
 guide: visually
 tactic: style
-updated: 2024-01-01
+updated: 2024-02-17
 ---
 Throughout the day, there is a natural reduction in height.
 
@@ -26,7 +26,7 @@ Hold your head, shoulders, buttocks, calves, and heels against the wall.
 
 {% include image.html name="regain-stature-height" alt="Recovering daily height loss" %}
 
-Try to tuck your chin in, aligning it with your forehead. The line between the highest point of the auditory meatus and lowest point of the eye socket should be parallel to the floor. This line is also called the *Frankfurt plane*.
+Try to tuck your chin in, aligning it with your forehead. The line between the highest point of the auditory meatus and lowest point of the eye socket should be parallel to the floor. This line is also called the *frankfurt plane*.
 
 {% include image.html name="head-frankfurt-plane" alt="Frankfurt plane" %}
 
