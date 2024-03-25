@@ -4,7 +4,7 @@ title: "Adjust the body shape using light and shadows"
 beforetoc: "Brighten the top and darkening the bottom. Reverse light and shadow."
 guide: visually
 tactic: style
-updated: 2024-03-24
+updated: 2024-03-25
 ---
 In the picture, the footprint seems to be bulging upward, doesn't it?
 
@@ -28,7 +28,7 @@ It's better to maintain a monochromatic color scheme without strong contrasts.[^
 
 {% include image.html name="monochrome-color-style" alt="Monochromatic clothing style with a light top and dark bottom" %}
 
-Likely, a similar dress pattern will have a similar effect.
+Likely, a dress pattern below will have a similar effect.
 
 {% include image.html name="gradual-design-dress" alt="A dress featuring horizontal lines" caption="A dress featuring horizontal lines arranged from sparse to dense according to the golden ratio."%}
 
